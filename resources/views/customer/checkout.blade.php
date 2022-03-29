@@ -16,7 +16,7 @@
                                     <input name="customRadioTemp" class="form-check-input" type="radio" value="prod_K29WGcK9BLdFkw" id="customRadioTemp1" checked />
                                     <span class="custom-option-header">
                                       <span class="h6 mb-0">{{ $data['0']->name }}</span>
-                                      <span>$ {{ $data['0']->price }} </span>
+                                      <span><small class="badge bg-label-success"><s>${{ $data['0']->price }}</s></small>  ${{ $data['0']->price - $data['0']->discounted_price }}/{{ $data['0']->name }}  </span>
                                     </span>
                                     <span class="custom-option-body">
                                       <p class="text-small mb-0"><strong class="badge bg-label-danger">{{ $data['0']->percentage }}% Discount Auto Applied</strong></p>
@@ -31,7 +31,7 @@
                                   <input name="customRadioTemp" class="form-check-input" type="radio" value="prod_K29WGcK9BLdFkw" id="customRadioTemp2" />
                                   <span class="custom-option-header">
                                     <span class="h6 mb-0">{{ $data['1']->name }}</span>
-                                    <span>$ {{ $data['1']->price }}</span>
+                                    <span><small class="badge bg-label-success"><s>${{ $data['1']->price }}</s></small> ${{ $data['1']->price - $data['1']->discounted_price }}/{{ $data['0']->name }}</span>
                                   </span>
                                   <span class="custom-option-body">
                                     <p class="text-small mb-0"><strong class="badge bg-label-danger">{{ $data['1']->percentage }}% Discount Auto Applied</strong></p>
@@ -111,15 +111,15 @@
                                 <dl class="row">
                   
                                   <dt class="col-6 fw-normal">Ragular Price</dt>
-                                  <dd class="col-6 text-end">$ {{ $data['0']->price }}/{{ $data['0']->name }}</dd>
+                                  <dd class="col-6 text-end">${{ $data['0']->price }}/{{ $data['0']->name }}</dd>
                   
                                   <dt class="col-6 fw-normal">Discount Price</dt>
-                                  <dd class="col-6 text-end"><span class="badge bg-label-success">Applied</span> ${{ $data['0']->price - $data['0']->discounted_price}}</dd>
+                                  <dd class="col-6 text-end"><span class="badge bg-label-success">Applied</span> - ${{ $data['0']->discounted_price}}</dd>
                   
                                   <hr>
                   
                                   <dt class="col-6">Now Pay</dt>
-                                  <dd class="col-6 fw-semibold text-end mb-0">$ {{ $data['0']->discounted_price }}/{{ $data['0']->name }}</dd>
+                                  <dd class="col-6 fw-semibold text-end mb-0">${{ $data['0']->price- $data['0']->discounted_price }}/{{ $data['0']->name }}</dd>
                   
                                 </dl>
                                 <!-- Address Details -->
@@ -181,15 +181,15 @@
                                 <dl class="row">
                   
                                   <dt class="col-6 fw-normal">Ragular Price</dt>
-                                  <dd class="col-6 text-end">$ {{ $data['1']->price }}/{{ $data['1']->name }}</dd>
+                                  <dd class="col-6 text-end">${{ $data['1']->price }}/{{ $data['0']->name }}</dd>
                   
                                   <dt class="col-6 fw-normal">Discount Price</dt>
-                                  <dd class="col-6 text-end"><span class="badge bg-label-success">Applied</span> ${{ $data['1']->price - $data['1']->discounted_price }}</dd>
+                                  <dd class="col-6 text-end"><span class="badge bg-label-success">Applied</span> - ${{ $data['1']->discounted_price }}</dd>
                   
                                   <hr>
                   
                                   <dt class="col-6">Now Pay</dt>
-                                  <dd class="col-6 fw-semibold text-end mb-0">${{ $data['1']->discounted_price }}/{{ $data['1']->name }}</dd>
+                                  <dd class="col-6 fw-semibold text-end mb-0">${{ $data['1']->price - $data['1']->discounted_price }}/{{ $data['0']->name }}</dd>
                   
                                 </dl>
                                 <!-- Address Details -->
