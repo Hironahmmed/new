@@ -96,7 +96,7 @@
                     </a>
                 </li>
                 <li class="menu-item {{ Request::is('admin/explore/amazpending') ? 'active' : ''}}">
-                    <a href="{{ route('admin.aliexpress.pending') }}" class="menu-link">
+                    <a href="{{ route('admin.amazon.pending') }}" class="menu-link">
                         <div data-i18n="Amazon Pending">Amazon Pending</div>
                     </a>
                 </li>
