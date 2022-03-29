@@ -85,7 +85,7 @@
                         <div data-i18n="AliExpress Explore">AliExpress Explore</div>
                     </a>
                 </li>
-                <li class="menu-item {{ Request::is('admin/explore/aliexpress/pending*') ? 'active' : ''}}">
+                <li class="menu-item {{ Request::is('admin/explore/alipending') ? 'active' : ''}}">
                     <a href="{{ route('admin.aliexpress.pending') }}" class="menu-link">
                         <div data-i18n="AliExpress Pending">AliExpress Pending</div>
                     </a>
@@ -93,6 +93,11 @@
                 <li class="menu-item {{ Request::is('admin/explore/amazon*') ? 'active' : ''}}">
                     <a href="{{ route('admin.amazon.index') }}" class="menu-link">
                         <div data-i18n="Amazon Explore">Amazon Explore</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ Request::is('admin/explore/amazpending') ? 'active' : ''}}">
+                    <a href="{{ route('admin.aliexpress.pending') }}" class="menu-link">
+                        <div data-i18n="Amazon Pending">Amazon Pending</div>
                     </a>
                 </li>
                 <li class="menu-item {{ Request::is('admin/explore/shopify*') ? 'active' : ''}}">

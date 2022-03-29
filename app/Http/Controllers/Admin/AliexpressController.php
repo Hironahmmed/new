@@ -17,7 +17,7 @@ class AliexpressController extends Controller
      */
     public function index()
     {
-        $aliexpresses = Aliexpress::latest()->paginate(10);
+        $aliexpresses = Aliexpress::where('is_approved',true)->paginate(10);
         return view('admin.aliexpress.index',compact('aliexpresses'));
     }
 

@@ -148,6 +148,7 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace','Admin','middleware'=
     Route::put('explore/aliexpress/{id}/approve','Admin\AliexpressController@approval')->name('aliexpress.approve');
     // Amazon
     Route::resource('explore/amazon','Admin\AmazonController');
+    Route::get('explore/amazpending','Admin\AmazonController@pendingAmazon')->name('amazon.pending');
     Route::put('explore/amazon/{id}/approve','Admin\AmazonController@approval')->name('amazon.approve');
     // Shopify
     Route::resource('explore/shopify','Admin\ShopifyController');

@@ -17,7 +17,7 @@ class AmazonController extends Controller
      */
     public function index()
     {
-        $amazons = Amazon::latest()->paginate(10);
+        $amazons = Amazon::where('is_approved',true)->latest()->paginate(10);
         return view('admin.amazon.index',compact('amazons'));
     }
 
@@ -120,6 +120,13 @@ class AmazonController extends Controller
         Toastr::success('Product Successfully Updated','Success');
         return redirect()->route('admin.amazon.index');
     }
+
+    // show all pending post
+    public function pendingAmazon(){
+        $amazons = Amazon::where('is_approved',false)->paginate(10);
+        return view('admin.amazon.pending',compact('amazons'));
+    }
+
 
     // Amazon Approval
     public function approval($id){
