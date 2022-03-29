@@ -117,6 +117,13 @@ class AliexpressController extends Controller
         return redirect()->route('admin.aliexpress.index');
     }
 
+    // show all pending post
+    public function pendingAliexpress(){
+        $aliexpresses = Aliexpress::where('is_approved',false)->paginate(10);
+        return view('admin.aliexpress.pending',compact('aliexpresses'));
+    }
+
+
     // Aliexpress Approval
     public function approval($id){
         $aliexpress = Aliexpress::find($id);

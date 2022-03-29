@@ -144,6 +144,7 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace','Admin','middleware'=
     Route::resource('option/country','Admin\CountryController');
     // Aliexpress Explore
     Route::resource('explore/aliexpress','Admin\AliexpressController');
+    Route::get('explore/alipending','Admin\AliexpressController@pendingAliexpress')->name('aliexpress.pending');
     Route::put('explore/aliexpress/{id}/approve','Admin\AliexpressController@approval')->name('aliexpress.approve');
     // Amazon
     Route::resource('explore/amazon','Admin\AmazonController');
