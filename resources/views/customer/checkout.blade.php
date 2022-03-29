@@ -20,7 +20,7 @@
                                     </span>
                                     <span class="custom-option-body">
                                       <p class="text-small mb-0"><strong class="badge bg-label-danger">{{ $data['0']->percentage }}% Discount Auto Applied</strong></p>
-                                      <small>Cancle any time when you don't need our servic.<br> We do have a 14-day money-back guarantee</small>
+                                      <small>You can !!!Cancle any time when you don't need our servic.<br> We do have a 14-day money-back guarantee</small>
                                     </span>
                                 </label>
                             </div>
