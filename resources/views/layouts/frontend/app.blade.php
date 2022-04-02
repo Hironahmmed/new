@@ -9,6 +9,8 @@
     
     <link rel="icon" type="image/png" href="{{ asset('assets/frontend/')}}/images/favicon.png">
     <title>{{ config('app.name', 'eButify.com') }} - @yield('title')</title>
+    <meta name="google-site-verification" content="d9IRp33pr75pL73aVc0a6FDTx17zY-JvQpPB2J1hsug" />
+    <meta name="facebook-domain-verification" content="hlzbm5w6c8qyinias8dpr1kv9nd82e" />
     @yield('facebook_meta')
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/frontend/')}}/css/swiper-bundle.min.css">
