@@ -76,7 +76,7 @@ class DashboardController extends Controller
     public function emails(Request $request)
     { 
         $details = [
-            'subject' => 'Customer Query',
+            'subject' => 'Guest Message',
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
