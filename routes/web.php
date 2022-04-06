@@ -58,7 +58,7 @@ Route::get('download/{video}', function($video)
 Route::get('download/{gif_one}', function($gif_one)
 {
     // Check if file exists in app/storage/file folder
-    $file_path = storage_path().'/app/public/gif/'. $gif_one;
+    $file_path = storage_path().'/app/public/gif/'.$gif_one;
     if (file_exists($file_path))
     {
         // Send Download
@@ -78,7 +78,7 @@ Route::get('download/{gif_one}', function($gif_one)
 Route::get('download/{gif_two}', function($gif_two)
 {
     // Check if file exists in app/storage/file folder
-    $file_path = storage_path().'/app/public/gif/'. $gif_two;
+    $file_path = storage_path().'/app/public/gif/'.$gif_two;
     if (file_exists($file_path))
     {
         // Send Download
@@ -98,7 +98,7 @@ Route::get('download/{gif_two}', function($gif_two)
 Route::get('download/{gif_three}', function($gif_three)
 {
     // Check if file exists in app/storage/file folder
-    $file_path = storage_path().'/app/public/gif/'. $gif_three;
+    $file_path = storage_path().'/app/public/gif/'.$gif_three;
     if (file_exists($file_path))
     {
         // Send Download

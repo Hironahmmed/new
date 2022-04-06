@@ -58,7 +58,7 @@
                                 <div class="post-media player mb-2">
                                     @if(!$facebook->thumbnail)
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $facebook->video }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="https://ebutify.com/download/{{ $facebook->video }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <video oncontextmenu="return false" data-play="hover" controls="controls" preload="auto" src="{{ Storage::disk('public')->url('video/').$facebook->video }}" type="video/mp4" class="my-video">
                                         <script>
@@ -254,25 +254,22 @@
                             <h5 class="card-header">Product Research</h5>
                             <div class="card-body">
                                 <ul class="list-group list-group-flush list-unstyled prm-list">
-                                <li>
-                                    <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $facebook->shopify_link }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
-                                </li>
-                                <li>
-                                    <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $facebook->aliexpress_link }}" role="tab" target="_blank"><i class="fas fa-shopping-bag"></i> View On Aliexpress</a>
-                                </li>
-                                
-                                <li>
-                                    <a class="list-group-item rounded my-1 btn-label-warning" href="{{ $facebook->amazon }}" role="tab" target="_blank"><i class="fab fa-amazon"></i> View Product On Amazon</a>
-                                </li>
-                                <li>
-                                    <a class="list-group-item rounded my-1 btn-label-secondary" href="{{ $facebook->ebay }}" role="tab" target="_blank"><i class="fab fa-ebay"></i> View Product On eBay</a>
-                                </li>
-                                <li>
-                                    <a class="list-group-item rounded my-1 btn-label-primary" href="{{ $facebook->ad_link }}" role="tab" target="_blank"><i class="fab fa-facebook"></i> View Facebook Ads</a>
-                                </li>
-                                <li>
-                                    <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $facebook->youtube_link }}" role="tab" target="_blank"><i class="fab fa-youtube"></i> View YouTube Review</a>
-                                </li>
+                                    <li>
+                                        <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $facebook->aliexpress_link }}" role="tab" target="_blank"><i class="fas fa-shopping-bag"></i> View On Aliexpress</a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a class="list-group-item rounded my-1 btn-label-warning" href="{{ $facebook->amazon }}" role="tab" target="_blank"><i class="fab fa-amazon"></i> View Product On Amazon</a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item rounded my-1 btn-label-secondary" href="{{ $facebook->ebay }}" role="tab" target="_blank"><i class="fab fa-ebay"></i> View Product On eBay</a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item rounded my-1 btn-label-primary" href="{{ $facebook->ad_link }}" role="tab" target="_blank"><i class="fab fa-facebook"></i> View Facebook Ads</a>
+                                    </li>
+                                    <li>
+                                        <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $facebook->youtube_link }}" role="tab" target="_blank"><i class="fab fa-youtube"></i> View YouTube Review</a>
+                                    </li>
                                 </ul>
         
                             </div>
@@ -307,9 +304,6 @@
                                         <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $facebook->competitor5 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
                                     </li>
                                     @endif
-                                    <li>
-                                        <a class="list-group-item rounded my-1 btn-label-danger" target="_blank" href="{{ $facebook->competitor1 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
-                                    </li>
                                 </ul>
                             </div>
                             </div>
@@ -343,19 +337,19 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="download">
-                                    <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $facebook->gif_one }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                    <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="https://ebutify.com/download/{{ $facebook->gif_one }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{ Storage::disk('public')->url('gif/').$facebook->gif_one }}" alt="First slide" />
                                 </div>
                                 <div class="carousel-item">
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $facebook->gif_two }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="https://ebutify.com/download/{{ $facebook->gif_two }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{ Storage::disk('public')->url('gif/').$facebook->gif_two }}" alt="Second slide" />
                                 </div>
                                 <div class="carousel-item">
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="{{Storage::disk('public')->url('gif/').$facebook->gif_three}}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="https://ebutify.com/download/{{$facebook->gif_three}}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{Storage::disk('public')->url('gif/').$facebook->gif_three}}" alt="Third slide" />
                                 </div>
