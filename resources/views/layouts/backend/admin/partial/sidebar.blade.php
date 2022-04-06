@@ -230,6 +230,26 @@
             </a>
         </li>
 
+        <!-- Review -->
+        <li class="menu-item {{ Request::is('admin/rating*') ? 'active open' : ''}}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon text-success far fa-star"></i>
+                <div data-i18n="Reviews">Reviews</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ Request::is('admin/rating/review*') ? 'active' : ''}}">
+                    <a href="{{ route('admin.review.index') }}" class="menu-link">
+                        <div data-i18n="Active">Active</div>
+                    </a>
+                </li>
+                <li class="menu-item  {{ Request::is('admin/rating/pending*') ? 'active' : ''}}">
+                    <a href="{{ route('admin.review.pending') }}" class="menu-link">
+                        <div data-i18n="Pending">Pending</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
         <!-- Misc -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Settings</span></li>
             <!-- Customer Management -->

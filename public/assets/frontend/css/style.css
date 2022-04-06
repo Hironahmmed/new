@@ -593,6 +593,21 @@ input {
 
 .story_data{
     padding: 1rem;
+    width: 65%;
+}
+
+.story_content img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0px 0px 4px #b5aebc;
+}
+
+.story_content {
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
 }
 
 .story_text{
@@ -603,13 +618,13 @@ input {
 .half_container{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .half_text{
     display: block;
     width: 75%;
-    margin-bottom: var(--mb-0-5);
+    font-weight: 700;
 }
 
 /*=============== DROP SHIPPING ==================*/
@@ -3748,3 +3763,4 @@ button.download-media.is-rounded {
 .rounded-pills {
     border-radius: 50rem !important;
 }
+

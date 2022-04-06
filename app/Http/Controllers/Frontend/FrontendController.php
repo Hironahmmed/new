@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Facebook;
 use App\Models\Post;
 use App\Models\Privacy;
+use App\Models\Review;
 use App\Models\Term;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class FrontendController extends Controller
     {
         $facebook = Facebook::latest()->approved()->paginate(10);
         $users = User::where('role_id',3)->count();
-        return view('frontend.home',compact('users','facebook'));
+        $reviews = Review::where('is_approved',true)->latest()->paginate(5);
+        return view('frontend.home',compact('users','facebook','reviews'));
     }
 
     public function blog(){

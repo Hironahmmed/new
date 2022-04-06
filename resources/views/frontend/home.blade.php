@@ -110,50 +110,26 @@ The Best Winning Product Research Tool For Dropshipping
 
         <div class="story_container container">
             <div class="swiper-wrapper">
+
+                @foreach($reviews as $review)
                 <!--=================== STORY 01 ========================-->
                 <div class="story_card swiper-slide">
                     <div class="story_data">
-                        <span class="story_text">eButify is the product search tool that has been missing for years. Thanks to eButify's Adspy, I can find the best products to pitch on all traffic sources in just a few clicks.</span>
+                        <span class="story_text">{{ $review->body }}</span>
+                        <hr>
                         <span class="half_container">
-                            <span class="half_text">Edi Medi</span>
-                            <span class="half_text">Member Since 2021</span>
+                            <span class="half_text">{{ $review->name }}</span>
+                            <span class="half_text">{{ $review->designation }}</span>
+                            <span class="half_text">Rated: {{ $review->rating }}</span>
+                            <span class="half_text">Reviewed at: {{ $review->created_at->diffForHumans() }}</span>
                         </span>
                     </div>
         
                     <div class="story_content">
-                        <img src="{{ asset('assets/frontend/')}}/images/ricardo.jpg" alt="">
+                        <img src="{{Storage::disk('public')->url('review/').$review->image}}" alt="">
                     </div>
                 </div>
-                
-                <!--=================== STORY 02 ========================-->
-                <div class="story_card swiper-slide">
-                    <div class="story_data">
-                        <span class="story_text">I am projecting products I have found on the site to generate $40,000 in sales by the end of this month. Cheers to eButify for serving as a platform to easily find winning products.</span>
-                        <span class="half_container">
-                            <span class="half_text">Riccardo Pasi</span>
-                            <span class="half_text">Member Since 2020</span>
-                        </span>
-                    </div>
-        
-                    <div class="story_content">
-                        <img src="{{ asset('assets/frontend/')}}/images/ricardo.jpg" alt="">
-                    </div>
-                </div>
-
-                <!--=================== STORY 03 ========================-->
-                <div class="story_card swiper-slide">
-                    <div class="story_data">
-                        <span class="story_text">If you're struggling to find that (winning) product, this is by far the easiest, quickest way that I've found so far".Use eButify to find winning products to sell in your store in minutes. They have really good software!</span>
-                        <span class="half_container">
-                            <span class="half_text">James Pheils</span>
-                            <span class="half_text">Member Since 2021</span>
-                        </span>
-                    </div>
-        
-                    <div class="story_content">
-                        <img src="{{ asset('assets/frontend/')}}/images/James.jpg" alt="">
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -171,6 +171,11 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace','Admin','middleware'=
     Route::resource('page/term','Admin\TermController');
     Route::resource('page/plan','Admin\PlanController');
 
+    // Customer Review
+    Route::resource('rating/review','Admin\ReviewController');
+    Route::put('rating/review/{id}/approve','Admin\ReviewController@approval')->name('review.approve');
+    Route::get('rating/pending','Admin\ReviewController@pendingReview')->name('review.pending');
+
     // Pending Product
     Route::get('pending/amazon','Admin\AmazonController@pendingAmazon')->name('amazon.pending');
     Route::get('pending/aliexpress','Admin\AliexpressController@pendingAliexpress')->name('aliexpress.pending');
