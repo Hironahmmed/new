@@ -426,3 +426,7 @@ video{
   box-shadow: none !important;
   background: #fff0 !important;
 }
+
+#swiper-gallery{
+  height: 428px !important;
+}
