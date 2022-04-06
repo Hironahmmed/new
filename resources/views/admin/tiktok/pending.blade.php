@@ -1,5 +1,5 @@
 @extends('layouts.backend.admin.app')
-@section('title','All Facebook Ad')
+@section('title','All Tiktok Ad')
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
 @endpush
@@ -12,12 +12,7 @@
               <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
                 
                 <div class="card-header flex-column flex-md-row">
-                  <div class="head-label text-center"><h5 class="card-title mb-0">All Facebook Ad <span class="badge rounded-pill  bg-label-success">{{ $facebooks->count() }}</span></h5></div>
-                      <div class="dt-action-buttons text-end pt-3 pt-md-0">
-                          <div class="dt-buttons"> 
-                              <a href="{{ route('admin.facebook.create') }}" class="dt-button create-new btn btn-primary"><span><i class="bx bx-plus me-sm-2"></i> <span class="d-none d-sm-inline-block">Add New Record</span></span></a>
-                          </div>
-                    </div>
+                  <div class="head-label text-center"><h5 class="card-title mb-0">All TikTok Ad <span class="badge rounded-pill  bg-label-success">{{ $tiktoks->count() }}</span></h5></div>
                 </div>
                 <table class="datatables-basic table table-bordered dataTable no-footer dtr-column collapsed" style="width: 1031px;">
                   <thead>
@@ -31,32 +26,38 @@
                       </tr>
                   </thead>
                   <tbody>
-                      @foreach($facebooks as $key=>$facebook)
+                      @foreach($tiktoks as $key=>$tiktok)
 
                       <tr class="odd">
                           <td>{{ $key + 1 }}</td>
-                          <td>{{ str_limit($facebook->title,'20') }}</td>
-                          <td>{{ $facebook->user->name }}</td>
+                          <td>{{ str_limit($tiktok->title,'20') }}</td>
+                          <td>{{ $tiktok->user->name }}</td>
                           <td>
-                              @if($facebook->is_approved == true)
+                              @if($tiktok->is_approved == true)
                               <span class="badge rounded-pill  bg-label-success">Approved</span>
                               @else
                               <span class="badge rounded-pill  bg-label-danger">Pending</span>
                               @endif
                           </td>
-                          <td>{{ $facebook->created_at->diffForHumans() }}</td>
+                          <td>{{ $tiktok->created_at->diffForHumans() }}</td>
                           <td>
-                              
-                              <a href="{{ route('admin.facebook.edit', $facebook->id )}}" class="btn mr-2 btn-sm btn-icon btn-label-success"><i class="bx bxs-edit"></i></a>
+                              <button type="button" class="btn btn-sm btn-icon btn-label-success" onclick="approve({{ $tiktok->id }})">
+                                  <span class="tf-icons bx bx-check"></span>
+                              </button>
+                              <a href="{{ route('admin.tiktok.edit', $tiktok->id )}}" class="btn mr-2 btn-sm btn-icon btn-label-success"><i class="bx bxs-edit"></i></a>
 
-                              <a href="{{ route('admin.facebook.show', $facebook->id )}}" class="btn mr-2 btn-sm btn-icon btn-label-primary"><i class="bx bxs-show"></i></a>
-                              <button type="button" class="btn btn-sm btn-icon btn-label-danger" onclick="deleteTag({{ $facebook->id }})">
+                              <a href="{{ route('admin.tiktok.show', $tiktok->id )}}" class="btn mr-2 btn-sm btn-icon btn-label-primary"><i class="bx bxs-show"></i></a>
+                              <button type="button" class="btn btn-sm btn-icon btn-label-danger" onclick="deleteTag({{ $tiktok->id }})">
                                   <span class="tf-icons bx bx-trash"></span>
                               </button>
                               
-                              <form id="delete-form-{{ $facebook->id }}" action="{{ route('admin.facebook.destroy',$facebook->id) }}" method="POST">
+                              <form id="delete-form-{{ $tiktok->id }}" action="{{ route('admin.tiktok.destroy',$tiktok->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
+                              </form>
+                              <form id="approve-form-{{ $tiktok->id }}" action="{{ route('admin.tiktok.approve',$tiktok->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
                               </form>
                           </td>
                         </tr>
@@ -65,7 +66,7 @@
                 </table>
               
               <div class="row">
-              {{ $facebooks->links('vendor.pagination.bootstrap-4') }}
+              {{ $tiktoks->links('vendor.pagination.bootstrap-4') }}
               </div></div>
             </div>
           </div>

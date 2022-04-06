@@ -13,11 +13,6 @@
                 
                 <div class="card-header flex-column flex-md-row">
                   <div class="head-label text-center"><h5 class="card-title mb-0">All Facebook Ad <span class="badge rounded-pill  bg-label-success">{{ $facebooks->count() }}</span></h5></div>
-                      <div class="dt-action-buttons text-end pt-3 pt-md-0">
-                          <div class="dt-buttons"> 
-                              <a href="{{ route('admin.facebook.create') }}" class="dt-button create-new btn btn-primary"><span><i class="bx bx-plus me-sm-2"></i> <span class="d-none d-sm-inline-block">Add New Record</span></span></a>
-                          </div>
-                    </div>
                 </div>
                 <table class="datatables-basic table table-bordered dataTable no-footer dtr-column collapsed" style="width: 1031px;">
                   <thead>
@@ -46,7 +41,9 @@
                           </td>
                           <td>{{ $facebook->created_at->diffForHumans() }}</td>
                           <td>
-                              
+                              <button type="button" class="btn btn-sm btn-icon btn-label-success" onclick="approve({{ $facebook->id }})">
+                                  <span class="tf-icons bx bx-check"></span>
+                              </button>
                               <a href="{{ route('admin.facebook.edit', $facebook->id )}}" class="btn mr-2 btn-sm btn-icon btn-label-success"><i class="bx bxs-edit"></i></a>
 
                               <a href="{{ route('admin.facebook.show', $facebook->id )}}" class="btn mr-2 btn-sm btn-icon btn-label-primary"><i class="bx bxs-show"></i></a>
@@ -57,6 +54,10 @@
                               <form id="delete-form-{{ $facebook->id }}" action="{{ route('admin.facebook.destroy',$facebook->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
+                              </form>
+                              <form id="approve-form-{{ $facebook->id }}" action="{{ route('admin.facebook.approve',$facebook->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
                               </form>
                           </td>
                         </tr>

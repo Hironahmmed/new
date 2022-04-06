@@ -17,7 +17,7 @@ class AmazonController extends Controller
      */
     public function index()
     {
-        $amazons = Amazon::where('is_approved',true)->latest()->paginate(10);
+        $amazons = Amazon::where('is_approved',true)->latest()->paginate(20);
         return view('admin.amazon.index',compact('amazons'));
     }
 
@@ -123,7 +123,7 @@ class AmazonController extends Controller
 
     // show all pending post
     public function pendingAmazon(){
-        $amazons = Amazon::where('is_approved',false)->paginate(10);
+        $amazons = Amazon::where('is_approved',false)->paginate(20);
         return view('admin.amazon.pending',compact('amazons'));
     }
 

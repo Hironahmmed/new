@@ -17,7 +17,7 @@ class AliexpressController extends Controller
      */
     public function index()
     {
-        $aliexpresses = Aliexpress::where('is_approved',true)->paginate(10);
+        $aliexpresses = Aliexpress::where('is_approved',true)->paginate(20);
         return view('admin.aliexpress.index',compact('aliexpresses'));
     }
 
@@ -119,10 +119,9 @@ class AliexpressController extends Controller
 
     // show all pending post
     public function pendingAliexpress(){
-        $aliexpresses = Aliexpress::where('is_approved',false)->paginate(10);
+        $aliexpresses = Aliexpress::where('is_approved',false)->paginate(20);
         return view('admin.aliexpress.pending',compact('aliexpresses'));
     }
-
 
     // Aliexpress Approval
     public function approval($id){

@@ -144,11 +144,9 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace','Admin','middleware'=
     Route::resource('option/country','Admin\CountryController');
     // Aliexpress Explore
     Route::resource('explore/aliexpress','Admin\AliexpressController');
-    Route::get('explore/alipending','Admin\AliexpressController@pendingAliexpress')->name('aliexpress.pending');
     Route::put('explore/aliexpress/{id}/approve','Admin\AliexpressController@approval')->name('aliexpress.approve');
     // Amazon
     Route::resource('explore/amazon','Admin\AmazonController');
-    Route::get('explore/amazpending','Admin\AmazonController@pendingAmazon')->name('amazon.pending');
     Route::put('explore/amazon/{id}/approve','Admin\AmazonController@approval')->name('amazon.approve');
     // Shopify
     Route::resource('explore/shopify','Admin\ShopifyController');
@@ -172,6 +170,13 @@ Route::group(['as'=>'admin.','prefix'=>'admin','namespace','Admin','middleware'=
     Route::resource('page/privacy','Admin\PrivacyController');
     Route::resource('page/term','Admin\TermController');
     Route::resource('page/plan','Admin\PlanController');
+
+    // Pending Product
+    Route::get('pending/amazon','Admin\AmazonController@pendingAmazon')->name('amazon.pending');
+    Route::get('pending/aliexpress','Admin\AliexpressController@pendingAliexpress')->name('aliexpress.pending');
+    Route::get('pending/shopify','Admin\ShopifyController@pendingShopify')->name('shopify.pending');
+    Route::get('pending/facebook','Admin\FacebookController@pendingFacebook')->name('facebook.pending');
+    Route::get('pending/tiktok','Admin\TiktokController@pendingTiktok')->name('tiktok.pending');
 });
 
 /*

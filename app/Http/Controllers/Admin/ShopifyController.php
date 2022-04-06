@@ -17,7 +17,7 @@ class ShopifyController extends Controller
      */
     public function index()
     {
-        $shopifies = Shopify::latest()->paginate(10);
+        $shopifies = Shopify::where('is_approved',true)->latest()->paginate(20);
         return view('admin.shopify.index',compact('shopifies'));
     }
 
@@ -178,6 +178,13 @@ class ShopifyController extends Controller
         Toastr::success('Product Successfully Updated','Success');
         return redirect()->route('admin.shopify.index');
     }
+
+    // show all pending post
+    public function pendingShopify(){
+        $shopifies = Shopify::where('is_approved',false)->paginate(20);
+        return view('admin.shopify.pending',compact('shopifies'));
+    }
+
 
     // Shopify Approval
     public function approval($id){

@@ -27,7 +27,7 @@ class TiktokController extends Controller
      */
     public function index()
     {
-        $tiktoks = Tiktok::latest()->paginate(10);
+        $tiktoks = Tiktok::where('is_approved',true)->latest()->paginate(20);
         return view('admin.tiktok.index',compact('tiktoks'));
     }
 
@@ -380,6 +380,13 @@ class TiktokController extends Controller
         
         Toastr::success('Product Successfully Updated','Success');
         return redirect()->route('admin.tiktok.index');
+    }
+
+
+    // show all pending post
+    public function pendingTiktok(){
+        $tiktoks = Tiktok::where('is_approved',false)->paginate(20);
+        return view('admin.tiktok.pending',compact('tiktoks'));
     }
 
     // Tiktok Approval

@@ -27,7 +27,7 @@ class FacebookController extends Controller
      */
     public function index()
     {
-        $facebooks = Facebook::latest()->paginate(10);
+        $facebooks = Facebook::where('is_approved',true)->latest()->paginate(20);
         return view('admin.facebook.index',compact('facebooks'));
     }
 
@@ -392,6 +392,12 @@ class FacebookController extends Controller
         
         Toastr::success('Product Successfully Saved','Success');
         return redirect()->route('admin.facebook.index');
+    }
+
+    // show all pending post
+    public function pendingFacebook(){
+        $facebooks = Facebook::where('is_approved',false)->paginate(20);
+        return view('admin.facebook.pending',compact('facebooks'));
     }
 
     // Loadad Approval

@@ -85,24 +85,49 @@
                         <div data-i18n="AliExpress Explore">AliExpress Explore</div>
                     </a>
                 </li>
-                <li class="menu-item {{ Request::is('admin/explore/alipending') ? 'active' : ''}}">
-                    <a href="{{ route('admin.aliexpress.pending') }}" class="menu-link">
-                        <div data-i18n="AliExpress Pending">AliExpress Pending</div>
-                    </a>
-                </li>
                 <li class="menu-item {{ Request::is('admin/explore/amazon*') ? 'active' : ''}}">
                     <a href="{{ route('admin.amazon.index') }}" class="menu-link">
                         <div data-i18n="Amazon Explore">Amazon Explore</div>
                     </a>
                 </li>
-                <li class="menu-item {{ Request::is('admin/explore/amazpending') ? 'active' : ''}}">
-                    <a href="{{ route('admin.amazon.pending') }}" class="menu-link">
-                        <div data-i18n="Amazon Pending">Amazon Pending</div>
-                    </a>
-                </li>
                 <li class="menu-item {{ Request::is('admin/explore/shopify*') ? 'active' : ''}}">
                     <a href="{{ route('admin.shopify.index') }}" class="menu-link">
                         <div data-i18n="Shopify Explore">Shopify Explore</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Pending Products -->
+        <li class="menu-item {{ Request::is('admin/pending*') ? 'active open' : ''}}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon {{ Request::is('admin/pending*') ? 'text-success' : 'text-danger'}} fas fa-check-square"></i>
+                <div data-i18n="Pending Products">Pending Products</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ Request::is('admin/pending/facebook') ? 'active' : ''}}">
+                    <a href="{{ route('admin.facebook.pending') }}" class="menu-link">
+                        <div data-i18n="Facebook">Facebook</div>
+                    </a>
+                </li>
+                <li class="menu-item  {{ Request::is('admin/pending/tiktok') ? 'active' : ''}}">
+                    <a href="{{ route('admin.tiktok.pending') }}" class="menu-link">
+                        <div data-i18n="Tiktok">Tiktok</div>
+                    </a>
+                </li>
+                <li class="menu-item  {{ Request::is('admin/pending/aliexpress') ? 'active' : ''}}">
+                    <a href="{{ route('admin.aliexpress.pending') }}" class="menu-link">
+                        <div data-i18n="Aliexpress">Aliexpress</div>
+                    </a>
+                </li>
+                <li class="menu-item  {{ Request::is('admin/pending/amazon') ? 'active' : ''}}">
+                    <a href="{{ route('admin.amazon.pending') }}" class="menu-link">
+                        <div data-i18n="Amazon">Amazon</div>
+                    </a>
+                </li>
+                <li class="menu-item  {{ Request::is('admin/pending/shopify') ? 'active' : ''}}">
+                    <a href="{{ route('admin.shopify.pending') }}" class="menu-link">
+                        <div data-i18n="Shopify">Shopify</div>
                     </a>
                 </li>
             </ul>
