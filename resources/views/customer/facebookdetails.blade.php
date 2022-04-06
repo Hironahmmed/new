@@ -55,7 +55,7 @@
                                 <div class="post-media player mb-2">
                                     @if(!$facebook->thumbnail)
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $facebook->video }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="https://ebutify.com/download/{{ $facebook->video }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <video oncontextmenu="return false" controls="controls" preload="auto" src="{{ Storage::disk('public')->url('video/').$facebook->video }}" type="video/mp4" class="my-video">
                                         <script>
@@ -333,19 +333,19 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="download">
-                                    <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $facebook->gif_one }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                    <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="https://ebutify.com/download/{{ $facebook->gif_one }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{ Storage::disk('public')->url('gif/').$facebook->gif_one }}" alt="First slide" />
                                 </div>
                                 <div class="carousel-item">
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $facebook->gif_two }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="https://ebutify.com/download/{{ $facebook->gif_two }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{ Storage::disk('public')->url('gif/').$facebook->gif_two }}" alt="Second slide" />
                                 </div>
                                 <div class="carousel-item">
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="{{Storage::disk('public')->url('gif/').$facebook->gif_three}}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="https://ebutify.com/download/{{ $facebook->gif_three}}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{Storage::disk('public')->url('gif/').$facebook->gif_three}}" alt="Third slide" />
                                 </div>

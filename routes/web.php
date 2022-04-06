@@ -95,14 +95,14 @@ Route::get('download/{gif_two}', function($gif_two)
 })->where('gif_two', '[A-Za-z0-9\-\_\.]+');
 
 // Download Gif Three Route
-Route::get('download/{gif_two}', function($gif_two)
+Route::get('download/{gif_three}', function($gif_three)
 {
     // Check if file exists in app/storage/file folder
-    $file_path = storage_path().'/app/public/gif/'. $gif_two;
+    $file_path = storage_path().'/app/public/gif/'. $gif_three;
     if (file_exists($file_path))
     {
         // Send Download
-        return Response::download($file_path, $gif_two, [
+        return Response::download($file_path, $gif_three, [
             'Content-Length: '. filesize($file_path)
         ]);
         return back();
@@ -112,7 +112,7 @@ Route::get('download/{gif_two}', function($gif_two)
         // Error
         return back();
     }
-})->where('gif_two', '[A-Za-z0-9\-\_\.]+');
+})->where('gif_three', '[A-Za-z0-9\-\_\.]+');
 
 Auth::routes();
 
