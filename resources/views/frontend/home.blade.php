@@ -1,7 +1,5 @@
 @extends('layouts.frontend.app')
-@section('title')
-The Best Winning Product Research Tool For Dropshipping
-@endsection
+@section('title','The Best Winning Product Research Tool')
 @section('facebook_meta')
 
     <link rel="canonical" href="{{url()->current()}}"/>
@@ -9,13 +7,14 @@ The Best Winning Product Research Tool For Dropshipping
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{url()->current()}}" />
     <meta property="og:site_name" content="{{ config('app.name', 'eButify.com') }}" />
-    <meta property="og:title" content="{{ config('app.name', 'eButify.com') }} - The Best Winning Product Research Tool For Dropshipping" />
-    <meta property="og:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!" />
+    <meta property="og:title" content="{{ config('app.name', 'eButify.com') }} - The Best Winning Product Research Tool" />
+    <meta property="og:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, and start selling!" />
     <meta property="og:image" itemprop="image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg" />
-    <meta name="Description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">
+    <meta name="Description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, and start selling!">
+    <meta name="keywords" content="product research, winning product research, product research tool, winning product research tool, find winning products, research, product idea, product spy, winning products, untapped product, facebook product research tool, tiktok product research tool, aliexpress product research, amazon product research">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} - The Best Winning Product Research Tool For Dropshipping">
-    <meta name="twitter:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">
+    <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} - The Best Winning Product Research Tool">
+    <meta name="twitter:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, and start selling!">
     <meta name="twitter:image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg">
 
 @endsection
@@ -47,14 +46,14 @@ The Best Winning Product Research Tool For Dropshipping
                     <h1 class="home_data_title">eButify to Empowering</h1>
                     <span class="home_data_subtitle">Dropshipping Businesses</span>
                 </span>
-                <span class="home_data_text">We are manually adding winning products on a daily basis. Stop wasting money on bad products. eButify is a curation of the best new products, every day. Wanna be a successful store owner? Subscribe now and get access to our full winning products list with a kickass detailed analytics.</span>
+                <span class="home_data_text">We are manually adding winning products on a daily basis. Stop wasting money on bad products. eButify is a curation of the best new products, every day. Want to be a successful store owner? Subscribe now and get access to our full winning products list with a kickass detailed analytics.</span>
                 <div class="home_btn">
                     <a href="{{ route('register') }}" class="button">Start Free Trial</a>
-                    <a href="#" class="button button_link wmBox" data-popup="{{ asset('assets/frontend/')}}/video/video.mp4"><img src="{{ asset('assets/frontend/')}}/images/Group 7.png" alt=""> Watch Demo</a>
+                    <a href="#" class="button button_link wmBox" data-popup="{{ asset('assets/frontend/')}}/video/video.mp4"><img src="{{ asset('assets/frontend/')}}/images/Group 7.png" alt="eButify Demo Video"> Watch Demo</a>
                 </div>
                 
                 <div class="banner_msg">
-                    <img src="{{ asset('assets/frontend/')}}/images/Layer 2.png" alt=""><span class="home_data_message"><p>Trusted by 500+ Businesses in 40+ countries over the world</p></span>
+                    <img src="{{ asset('assets/frontend/')}}/images/Layer 2.png" alt="eButify Trust"><span class="home_data_message"><p>Trusted by 500+ Businesses in 40+ countries over the world</p></span>
                 </div>
             </div>
 
@@ -86,7 +85,7 @@ The Best Winning Product Research Tool For Dropshipping
 
     <!--============================= STORY ===================================-->
     <section class="story section">
-        <img src="{{ asset('assets/frontend/')}}/images/Home-Page-Design---WeDevs-U3.png" alt="" class="story_background">
+        <img src="{{ asset('assets/frontend/')}}/images/Home-Page-Design---WeDevs-U3.png" alt="eButify Success" class="story_background">
         <div class="story_nav_container container">
             <div class="story_head">
                 <div class="linear_story">
@@ -97,11 +96,11 @@ The Best Winning Product Research Tool For Dropshipping
                     <div class="swiper-pagination"></div>
                     <div class="story_navigation">
                         <div class="story-prev">
-                            <img src="{{ asset('assets/frontend/')}}/images/Group 20.png" alt="">
+                            <img src="{{ asset('assets/frontend/')}}/images/Group 20.png" alt="Preview">
                         </div>
 
                         <div class="story-next">
-                            <img src="{{ asset('assets/frontend/')}}/images/Group 21.png" alt="">
+                            <img src="{{ asset('assets/frontend/')}}/images/Group 21.png" alt="Next">
                         </div>
                     </div>
                 </div>
@@ -126,7 +125,7 @@ The Best Winning Product Research Tool For Dropshipping
                     </div>
         
                     <div class="story_content">
-                        <img src="{{Storage::disk('public')->url('review/').$review->image}}" alt="">
+                        <img src="{{Storage::disk('public')->url('review/').$review->image}}" alt="{{ $review->name }}">
                     </div>
                 </div>
                 @endforeach
@@ -146,11 +145,11 @@ The Best Winning Product Research Tool For Dropshipping
                         </div>
         
                         <div class="shipping_button swiper-slide">
-                            Untapped Product
+                            TikTok Ad
                         </div>
     
                         <div class="shipping_button swiper-slide">
-                            Trending Product
+                            Shopify Explore
                         </div>
     
                         <div class="shipping_button swiper-slide">
@@ -165,8 +164,8 @@ The Best Winning Product Research Tool For Dropshipping
                 
                 <div class="shipping_padding">
                     <div class="shipping_section">
-                        <div class="swiper-button-next"><img src="{{ asset('assets/frontend/')}}/images/Group 42.png" alt=""></div>
-                        <div class="swiper-button-prev"><img src="{{ asset('assets/frontend/')}}/images/Group 40.png" alt=""></div>
+                        <div class="swiper-button-next"><img src="{{ asset('assets/frontend/')}}/images/Group 42.png" alt="Next"></div>
+                        <div class="swiper-button-prev"><img src="{{ asset('assets/frontend/')}}/images/Group 40.png" alt="Previous"></div>
     
                         <div class="swiper-wrapper">
                             <!--=== DROP SHIPPING PART 01 ===-->
@@ -177,7 +176,8 @@ The Best Winning Product Research Tool For Dropshipping
                                     </video>
         
                                     <span>
-                                        We provide 15+ best-performing winning ads on social media. Our top-rated product researchers pick them on a daily basis. We analyze the products with our master formula using different methods but not only basis on ad engagement. With the Facebook ad, we also provide 5 private level competitor links, AliExpress best supplier product link, Amazon link, eBay link, Youtube short review link, 1 to 3 Copywrite free gif images, handwritten product descriptions, We also provide freshly downloadable square product images and 2 product video for Facebook ad. For marketing purposes, we provide product audience size, ad content, and much more information on the detail page which will help you to scale your business. No need to hire someone for the research because we provide everything you need to start your dropshipping business. So, why you are waiting for?
+                                    <h1 class="section_heading section_heading_border"><strong>What Facebook Ads</strong> can do for you?</h1>
+                                        eButify Facebook tool is designed for dropshippers and online retailers that they can find winning products by spying on successful ads with social proof. It allows you to discover your competitors’ ads and check your niches. The tool also allows you to spy on the most successful shops of the moment and discover their hot products. Moreover, for Dropshipping product advertisements, you have access to product details, product photos, gif images, product descriptions, shop data, and much more. eButify Facebook Tool offers the most search options of any Ad Intelligence Tool, so you can find the data you want. Be as rigorous as you need to: search or filter by trending product, Untapped Product, Winning product, By technology,  By eCommerce platform - whatever helps you find the information you can work with.
                                     </span>
                                 </div>
                             </div>
@@ -190,7 +190,8 @@ The Best Winning Product Research Tool For Dropshipping
                                     </video>
         
                                     <span>
-                                        We provide 3 to 5 untapped products depending on the dropshipping market. Our top-rated product researchers pick them on a daily basis. We analyze the products with our master formula using different methods but not only basis on ad engagement. With the Facebook ad, we also provide 5 private level competitor links, AliExpress best supplier product link, Amazon link, eBay link, Youtube short review link, 1 to 3 Copywrite free gif images, handwritten product descriptions, We also provide freshly downloadable square product images and 2 product video for Facebook ad. For marketing purposes, we provide product audience size, ad content, and much more information on the detail page which will help you to scale your business.No need to hire someone for the research because we provide everything you need to start your dropshipping business. So, why you are waiting for?
+                                        <h1 class="section_heading section_heading_border"><strong>What TikTok Ads</strong> can do for you?</h1>
+                                        Contains a large number of TikTok ads for e-commerce, and branding. The latest and hottest ads for e-commerce selling, brand exposure, etc. Comprehensive ad search function, intelligent filtering, easy to find the most promising products.  Extremely informative ad data (Ad Impressions,days,popularity,ad likes,comments,etc.) <br><br> Analysis of ad data (ad costs, ad targets, more ad strategies for ad landing page, etc.) Master the ad strategy, selling direction, and hot selling products of the competitors, and quickly follow the product of ads to achieve profit growth faster. Contains the most complete competitors' products, ad materials, ad strategies, days, ad copy, etc.
                                     </span>
                                 </div>
                             </div>
@@ -203,7 +204,8 @@ The Best Winning Product Research Tool For Dropshipping
                                     </video>
         
                                     <span>
-                                        We provide 3 to 5 trending products depending on the dropshipping market which is viral now on social media. Our top-rated product researchers pick them on a daily basis. We analyze the products with our master formula using different methods but not only basis on ad engagement. With the Facebook ad, we also provide 5 private level competitor links, AliExpress best supplier product link, Amazon link, eBay link, Youtube short review link, 1 to 3 Copywrite free gif images, handwritten product descriptions, We also provide freshly downloadable square product images and 2 product video for Facebook ad. For marketing purposes, we provide product audience size, ad content, and much more information on the detail page which will help you to scale your business. No need to hire someone for the research because we provide everything you need to start your dropshipping business. So, why you are waiting for?
+                                        <h1 class="section_heading section_heading_border"><strong>What Shopify Explore</strong> can do for you?</h1>
+                                        eButify provides the most popular Shopify store data so new dropshipper can get ideas from them. Also, have 4 hot selling products for every store we analyze for you. We decide on a popular store after verifying several examinations. We check daily sales history, and monthly income by using our AI tools to get the most recent result for a store. Also, check the global search rank and SEO score. Every day we check hundreds of stores to place our tools, but only we put that store that passes all verification to be a successful dropshipping store. <br><br> We just want to share the best to get success in dropshipping business with our customers. 
                                     </span>
                                 </div>
                             </div>
@@ -216,6 +218,7 @@ The Best Winning Product Research Tool For Dropshipping
                                     </video>
         
                                     <span>
+                                    <h1 class="section_heading section_heading_border"><strong>What AliExpress Explore</strong> can do for you?</h1>
                                         We provide 10 to 20 AliExpress best-selling products depending on the AliExpress dropship market and which products are best performing on the AliExpress market. Our top-rated product researchers pick them on a daily basis. We analyze the products with our master formula using different methods. Here we only list the product which has a wow factor effect that will catch your customer's eye contact to push them to buy the product. Also, most of the products will solve at least one problem. We pick the products which have the ability to be the next winner. No need to hire someone for the research because we provide everything you need to start your dropshipping business. So, why you are waiting for?
                                     </span>
                                 </div>
@@ -229,6 +232,7 @@ The Best Winning Product Research Tool For Dropshipping
                                     </video>
         
                                     <span>
+                                    <h1 class="section_heading section_heading_border"><strong>What Amazon Explore</strong> can do for you?</h1>
                                         We provide 5 to 10 Amazon best-selling products depending on the Amazon dropship market and which products are best performing on the Amazon market. Our top-rated product researchers pick them on a daily basis. We analyze the products with our master formula using different methods. Here we only list the product which has a wow factor effect that will catch your customer's eye contact to push them to buy the product. Also, most of the products will solve at least one problem. We pick the products which have the ability to be the next winner. No need to hire someone for the research because we provide everything you need to start your dropshipping business. So, why you are waiting for?
                                     </span>
                                 </div>
@@ -367,11 +371,11 @@ The Best Winning Product Research Tool For Dropshipping
 
     <!--====================== SCROLL BUTTON ============================-->
     <div class="scroll_btn_section section">
-        <h1 class="scroll_btn_title">Find , Sell, Scale And Succeed <br>All With One Smart Theme</h1>
+        <h1 class="scroll_btn_title">Find , Sell, Scale And Succeed <br>All With One Smart Tool</h1>
         <div class="scroll_btn_container container">
             <a href="#research" class="scroll_btn_link">
                 <div class="scroll_btn_wrapper">
-                    <img src="{{ asset('assets/frontend/')}}/images/searching.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/searching.png" alt="Winning Product Research Tool">
 
                     <span>Research</span>
                 </div>
@@ -379,7 +383,7 @@ The Best Winning Product Research Tool For Dropshipping
 
             <a href="#sell" class="scroll_btn_link">
                 <div class="scroll_btn_wrapper">
-                    <img src="{{ asset('assets/frontend/')}}/images/trade.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/trade.png" alt="Winning Product Research Tool">
 
                     <span>Sell</span>
                 </div>
@@ -387,7 +391,7 @@ The Best Winning Product Research Tool For Dropshipping
 
             <a href="#scale" class="scroll_btn_link">
                 <div class="scroll_btn_wrapper">
-                    <img src="{{ asset('assets/frontend/')}}/images/sales.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/sales.png" alt="Winning Product Research Tool">
 
                     <span>Scale</span>
                 </div>
@@ -395,7 +399,7 @@ The Best Winning Product Research Tool For Dropshipping
 
             <a href="#success" class="scroll_btn_link">
                 <div class="scroll_btn_wrapper">
-                    <img src="{{ asset('assets/frontend/')}}/images/goal.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/goal.png" alt="Winning Product Research Tool">
 
                     <span>Success</span>
                 </div>
@@ -407,14 +411,14 @@ The Best Winning Product Research Tool For Dropshipping
     <div class="research_section section"  id="research">
         <div class="research_container container">
             <div class="research_title_section">
-                <img src="{{ asset('assets/frontend/')}}/images/searching.png" alt="">
+                <img src="{{ asset('assets/frontend/')}}/images/searching.png" alt="Product Research">
 
                 <span>Research</span>
             </div>
 
             <div class="research_wrapper grid">   
                 <div class="research_content">
-                    <img src="{{ asset('assets/frontend/')}}/images/research.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/research.png" alt="Product Spy">
                 </div>
 
                 <div class="research_data">
@@ -434,14 +438,14 @@ The Best Winning Product Research Tool For Dropshipping
     <div class="sell_section section"  id="sell">
         <div class="sell_container container">
             <div class="sell_title_section">
-                <img src="{{ asset('assets/frontend/')}}/images/trade.png" alt="">
+                <img src="{{ asset('assets/frontend/')}}/images/trade.png" alt="Product Sourch">
 
                 <span>Sell</span>
             </div>
 
             <div class="sell_wrapper grid">
                 <div class="sell_content">
-                    <img src="{{ asset('assets/frontend/')}}/images/Sell.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/Sell.png" alt="Dropshipping Product Research">
                 </div>
 
                 <div class="sell_data">
@@ -461,14 +465,14 @@ The Best Winning Product Research Tool For Dropshipping
     <div class="scale_section section"  id="scale">
         <div class="scale_container container">
             <div class="scale_title_section">
-                <img src="{{ asset('assets/frontend/')}}/images/sales.png" alt="">
+                <img src="{{ asset('assets/frontend/')}}/images/sales.png" alt="Scale Business">
 
                 <span>Scale</span>
             </div>
 
             <div class="scale_wrapper grid">  
                 <div class="scale_content">
-                    <img src="{{ asset('assets/frontend/')}}/images/Sceal.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/Sceal.png" alt="Scale Your Business">
                 </div>
 
                 <div class="scale_data">
@@ -496,7 +500,7 @@ The Best Winning Product Research Tool For Dropshipping
 
             <div class="try_ebutify_btn_wrapper">
                 <a href="{{ route('register') }}" class="try_ebutify_btn">Try eButify For free</a>
-                <a href="customer_feedback.html" class="customer_feed_btn">View Customer Feedback</a>
+                <a href="{{ route('register') }}" class="customer_feed_btn">View Customer Feedback</a>
             </div>
 
             <div class="try_ebutify_tag">
@@ -510,14 +514,14 @@ The Best Winning Product Research Tool For Dropshipping
     <div class="success_section section"  id="success">
         <div class="success_container container">
             <div class="success_title_section">
-                <img src="{{ asset('assets/frontend/')}}/images/goal.png" alt="">
+                <img src="{{ asset('assets/frontend/')}}/images/goal.png" alt="Winning Product">
 
                 <span>Success</span>
             </div>
 
             <div class="success_wrapper grid">
                 <div class="success_content">
-                    <img src="{{ asset('assets/frontend/')}}/images/Success.png" alt="">
+                    <img src="{{ asset('assets/frontend/')}}/images/Success.png" alt="Dropshipping Success">
                 </div>
 
                 <div class="success_data">
@@ -570,95 +574,95 @@ The Best Winning Product Research Tool For Dropshipping
                     <div class="pricing_content_features grid">
                         <ul class="pricing_content_features_list">
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Live Facebook Ads">
                                 <span>Live Facebook Ads</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Winning Ads">
                                 <span>Facebook Winning Ads</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Ads Research">
                                 <span>Facebook Ads Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Ads Content">
                                 <span>Facebook Ads Content</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Audience Research">
                                 <span>Facebook Audience Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trending Product Research">
                                 <span>Trending Product Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Untapped Product Research">
                                 <span>Untapped Product Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Competitor Research">
                                 <span>Competitor Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Competitors Link">
                                 <span>5 Competitors Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Ads Copy">
                                 <span>Ads Copy</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Targeting People">
                                 <span>Targeting People</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Hand Written Description">
                                 <span>Hand Written Description</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Download Fresh Images">
                                 <span>Download Fresh Images</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Download Gif Images">
                                 <span>Download Gif Images</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Download Product Video">
                                 <span>Download Product Video</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>AliExpress Trend Explorer</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>Amazon Trend Explore</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>Shopify Store Explore</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>Best Ali Supplier Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="eBay Product">
                                 <span>eBay Product Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Amazon Product">
                                 <span>Amazon Product Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Support">
                                 <span>Phone Call Support</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Support">
                                 <span>24/7 Email Support</span>
                             </li>
                         </ul>
@@ -689,96 +693,96 @@ The Best Winning Product Research Tool For Dropshipping
 
                     <div class="pricing_content_features grid">
                         <ul class="pricing_content_features_list">
-                            <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                        <li class="pricing_content_features_item">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Live Facebook Ads">
                                 <span>Live Facebook Ads</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Winning Ads">
                                 <span>Facebook Winning Ads</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Ads Research">
                                 <span>Facebook Ads Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Ads Content">
                                 <span>Facebook Ads Content</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Facebook Audience Research">
                                 <span>Facebook Audience Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trending Product Research">
                                 <span>Trending Product Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Untapped Product Research">
                                 <span>Untapped Product Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Competitor Research">
                                 <span>Competitor Research</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Competitors Link">
                                 <span>5 Competitors Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Ads Copy">
                                 <span>Ads Copy</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Targeting People">
                                 <span>Targeting People</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Hand Written Description">
                                 <span>Hand Written Description</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Download Fresh Images">
                                 <span>Download Fresh Images</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Download Gif Images">
                                 <span>Download Gif Images</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Download Product Video">
                                 <span>Download Product Video</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>AliExpress Trend Explorer</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>Amazon Trend Explore</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>Shopify Store Explore</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Trend Explorer">
                                 <span>Best Ali Supplier Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="eBay Product">
                                 <span>eBay Product Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Amazon Product">
                                 <span>Amazon Product Link</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Support">
                                 <span>Phone Call Support</span>
                             </li>
                             <li class="pricing_content_features_item">
-                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="">
+                                <img src="{{ asset('assets/frontend/')}}/images/check-mark.png" alt="Support">
                                 <span>24/7 Email Support</span>
                             </li>
                         </ul>
@@ -794,7 +798,7 @@ The Best Winning Product Research Tool For Dropshipping
     <section class="return_policy section">
         <div class="return_container container">
             <div class="return_content">
-                <img src="{{ asset('assets/frontend/')}}/images/money-back-guarantee.png" alt="">
+                <img src="{{ asset('assets/frontend/')}}/images/money-back-guarantee.png" alt="eButify Refund Policy">
             </div>
 
             <div class="return_data">
@@ -830,8 +834,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">What services does eButify provides?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -848,8 +852,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">Do you have some kind of community?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -866,8 +870,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">Do you offer product descriptions?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -884,13 +888,13 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">Can I use your product description?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
                         <p>
-                            Yes, you can use our product description. We provide handmade product descriptions by our talented copywriter.
+                            Yes, you can use our product description. We provide handmade product descriptions by our talented copyright.
                         </p>
                     </div>
                 </div>
@@ -902,8 +906,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">Do you offer gif images?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -922,8 +926,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">Do you offer videos for ads?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -940,8 +944,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">Do you offer a free trial?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -958,8 +962,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">How much eButify membership costs?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -976,8 +980,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">What is your refund policy?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -994,8 +998,8 @@ The Best Winning Product Research Tool For Dropshipping
                             <h1 class="faq_title">Can I cancel any time?</h1>
                         </div>
 
-                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="" class="faqicon_close faqicon">
-                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="" class="faqicon_open faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Line 8.png" alt="eButify" class="faqicon_close faqicon">
+                        <img src="{{ asset('assets/frontend/')}}/images/Group 114.png" alt="eButify" class="faqicon_open faqicon">
                     </div>
 
                     <div class="faq_list grid">
@@ -1014,7 +1018,7 @@ The Best Winning Product Research Tool For Dropshipping
     <section class="journey">
         <div class="journey_container container">
             <div class="journey_content">
-                <img src="{{ asset('assets/frontend/')}}/images/Journey.png" alt="">
+                <img src="{{ asset('assets/frontend/')}}/images/Journey.png" alt="eButify">
             </div>
             
             <div class="journey_data grid">

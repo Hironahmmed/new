@@ -17,6 +17,7 @@
     <meta property="article:published_time" content="{{ $post->created_at }}" />
     <meta property="article:modified_time" content="{{ $post->updated_at }}" />
     <meta name="Description" content="{{ $post->meta_desc }}">
+    <meta name="keywords" content="product research, winning product research, product research tool, winning product research tool, find winning products, research, product idea, product spy, winning products, untapped product, facebook product research tool, tiktok product research tool, aliexpress product research, amazon product research">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} {{ $post->title }}">
     <meta name="twitter:description" content="{{ $post->meta_desc }}">

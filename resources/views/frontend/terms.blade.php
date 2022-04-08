@@ -1,7 +1,5 @@
 @extends('layouts.frontend.app')
-@section('title')
-Terms and Conditions
-@endsection
+@section('title','Terms and Conditions')
 @section('facebook_meta')
 
     <link rel="canonical" href="{{url()->current()}}"/>
@@ -13,6 +11,7 @@ Terms and Conditions
     <meta property="og:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!" />
     <meta property="og:image" itemprop="image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg" />
     <meta name="Description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">
+    <meta name="keywords" content="product research, winning product research, product research tool, winning product research tool, find winning products, research, product idea, product spy, winning products, untapped product, facebook product research tool, tiktok product research tool, aliexpress product research, amazon product research">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} - Terms and Conditions">
     <meta name="twitter:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">

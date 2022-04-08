@@ -1,7 +1,5 @@
 @extends('layouts.frontend.app')
-@section('title')
-Free Tips and Resources for Dropshippers
-@endsection
+@section('title','Dropshipping Free Tips and Resources for Dropshippers')
 @section('facebook_meta')
 
     <link rel="canonical" href="{{url()->current()}}"/>
@@ -10,12 +8,13 @@ Free Tips and Resources for Dropshippers
     <meta property="og:url" content="{{url()->current()}}" />
     <meta property="og:site_name" content="{{ config('app.name', 'eButify.com') }}" />
     <meta property="og:title" content="{{ config('app.name', 'eButify.com') }} - Free Tips and Resources for Dropshippers" />
-    <meta property="og:description" content="{{ config('app.name', 'eButify.com') }} - Check out the eButify blog for tips and resources through every stage of your journey. From finding winning products and building a store, to marketing and scaling up" />
+    <meta property="og:description" content="{{ config('app.name', 'eButify.com') }} - Check out the eButify blog for tips and resources through every stage of your journey. To find winning products and building a store, to marketing and scaling up" />
     <meta property="og:image" itemprop="image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg" />
-    <meta name="Description" content="{{ config('app.name', 'eButify.com') }} - Check out the eButify blog for tips and resources through every stage of your journey. From finding winning products and building a store, to marketing and scaling up">
+    <meta name="Description" content="{{ config('app.name', 'eButify.com') }} - Check out the eButify blog for tips and resources through every stage of your journey. To find winning products and building a store, to marketing and scaling up">
+    <meta name="keywords" content="product research, winning product research, product research tool, winning product research tool, find winning products, research, product idea, product spy, winning products, untapped product, facebook product research tool, tiktok product research tool, aliexpress product research, amazon product research">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} - Free Tips and Resources for Dropshippers">
-    <meta name="twitter:description" content="{{ config('app.name', 'eButify.com') }} - Check out the eButify blog for tips and resources through every stage of your journey. From finding winning products and building a store, to marketing and scaling up">
+    <meta name="twitter:description" content="{{ config('app.name', 'eButify.com') }} - Check out the eButify blog for tips and resources through every stage of your journey. To find winning products and building a store, to marketing and scaling up">
     <meta name="twitter:image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg">
 
 @endsection

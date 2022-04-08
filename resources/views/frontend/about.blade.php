@@ -1,7 +1,5 @@
 @extends('layouts.frontend.app')
-@section('title')
-About Us and Our Company
-@endsection
+@section('title','About Us and Our Company')
 @section('facebook_meta')
 
     <link rel="canonical" href="{{url()->current()}}"/>
@@ -10,12 +8,13 @@ About Us and Our Company
     <meta property="og:url" content="{{url()->current()}}" />
     <meta property="og:site_name" content="{{ config('app.name', 'eButify.com') }}" />
     <meta property="og:title" content="{{ config('app.name', 'eButify.com') }} - About Us and Our Company" />
-    <meta property="og:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!" />
+    <meta property="og:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, and start selling!" />
     <meta property="og:image" itemprop="image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg" />
-    <meta name="Description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">
+    <meta name="Description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, and start selling!">
+    <meta name="keywords" content="product research, winning product research, product research tool, winning product research tool, find winning products, research, product idea, product spy, winning products, untapped product, facebook product research tool, tiktok product research tool, aliexpress product research, amazon product research">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} - About Us and Our Company">
-    <meta name="twitter:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">
+    <meta name="twitter:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, and start selling!">
     <meta name="twitter:image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg">
 
 @endsection
