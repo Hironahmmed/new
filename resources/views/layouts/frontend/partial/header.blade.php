@@ -17,7 +17,8 @@
 
             <div class="btn_container">
                 <a href="{{ route('login') }}" class="btn_log">Login</a>
-                <a href="{{ route('register') }}" class="btn_trial">Start Free Trial</a>
+                {{-- <a href="{{ route('register') }}" class="btn_trial">Start Free Trial</a> --}}
+                <a href="{{ route('democustomer.dashboard') }}" target="_blank" class="btn_trial">Demo App</a>
             </div>
 
             <i class="ri-close-line nav_close" id="nav-close"></i>

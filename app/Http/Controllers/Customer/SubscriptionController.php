@@ -15,7 +15,7 @@ class SubscriptionController extends Controller
 
         $planId = $request->plan;
 
-        Auth()->user()->newSubscription('main', $planId)->withCoupon($request->coupon)->trialUntil(Carbon::now()->addDays(7))->create($paymentMethod);
+        Auth()->user()->newSubscription('main', $planId)->withCoupon($request->coupon)->create($paymentMethod);
 
         return response([
             'success_url'=> redirect()->intended(route('customer.dashboard'))->getTargetUrl(),

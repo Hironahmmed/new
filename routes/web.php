@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DemoCustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -255,6 +256,37 @@ Route::group(['as'=>'customer.','namespace','Customer','middleware'=>['auth','cu
     Route::post('/subscribe', 'Customer\SubscriptionController@index')->name('subscribe');
 
     Route::get('/cancel-subscribe', 'Customer\SubscriptionController@cancel')->name('cancel-subscribe');
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Demo Customer Routes
+|--------------------------------------------------------------------------
+| Here is only customer related routes. These
+| routes are loaded by the customer within a group which
+| contains the "web" customer group.
+*/
+Route::group(['as'=>'democustomer.'], function(){
+    Route::get('democustomer/dashboard',[DemoCustomerController::class,'index'])->name('dashboard');
+    // Facebook
+    Route::get('democustomer/facebook',[DemoCustomerController::class,'facebookAd'])->name('facebook');
+    Route::get('democustomer/facebook/{slug}',[DemoCustomerController::class,'facebookDetails'])->name('facebook.details');
+    // Tiktok
+    Route::get('democustomer/tiktok',[DemoCustomerController::class,'tiktokad'])->name('tiktok');
+    Route::get('democustomer/tiktok/{slug}',[DemoCustomerController::class,'tiktokDetails'])->name('tiktok.details');
+    // Shopify
+    Route::get('democustomer/shopify',[DemoCustomerController::class,'shopify'])->name('shopify');
+    // Aliexpress
+    Route::get('democustomer/aliexpress',[DemoCustomerController::class,'aliexpress'])->name('aliexpress');
+    // Amazon
+    Route::get('democustomer/amazon',[DemoCustomerController::class,'amazon'])->name('amazon');
+    // FAQ
+    Route::get('democustomer/my.faq',[DemoCustomerController::class,'faq'])->name('faq');
+    // Contact Us
+    Route::get('democustomer/contact',[DemoCustomerController::class,'contact'])->name('contact');
+    // Tutorials
+    Route::get('democustomer/tutorial',[DemoCustomerController::class,'tutorial'])->name('tutorial');
 });
 
 /*
