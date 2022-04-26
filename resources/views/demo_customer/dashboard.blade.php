@@ -134,7 +134,7 @@
                                     Master the ad strategy, selling direction, and hot selling products of the competitors, and quickly follow the product of ads to achieve profit growth faster. Contains the most complete competitors' products, ad materials, ad strategies, ad copy, etc.
                                 </p>
                                 
-                                <a href="" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="btn btn-primary">Go Facebook Ad</a>
+                                <a href="{{ route('demo.facebook') }}" class="btn btn-primary">Go Facebook Ad</a>
                             </div>
                             <div class="col-xl-5">
                                 <img src="https://www.pipiads.com/img/jiashao1ying.3e690a49.png">
@@ -153,7 +153,7 @@
                                     Master the ad strategy, selling direction, and hot selling products of the competitors, and quickly follow the product of ads to achieve profit growth faster. Contains the most complete competitors' products, ad materials, ad strategies, days, ad copy, etc.
                                 </p>
                                 
-                                <a href="" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="btn btn-primary">Go TikTok Ad</a>
+                                <a href="{{ route('demo.tiktok') }}" class="btn btn-primary">Go TikTok Ad</a>
                             </div>
                             <div class="col-xl-4">
                                 <img src="https://www.pipiads.com/img/jiashao1ying.3e690a49.png">

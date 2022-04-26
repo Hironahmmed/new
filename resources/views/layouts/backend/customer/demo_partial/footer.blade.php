@@ -19,19 +19,20 @@
     <div class="modal-content p-3 p-md-5">
       <div class="modal-body">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="mb-4">
-          <h3>Add New Card</h3>
-          <p>Add new card to complete payment</p>
+        <div>
+          <h4 class="text-danger" style="margin-bottom: 0px !important;"><i class="text-danger fas fa-thin fa-bullhorn"></i> Access Deny</h4>
+          <p style="margin-bottom: 0px !important;">Demo users can't access these features!</p>
         </div>
-
+        <div class="dropdown-divider"></div>
 
         <div class="paragra">
-            <p>this is model body</p>
+            <p>We are sorry to say that our demo part does not contain our full features because the demo tool is only used for demo purposes, that's why so many features are not available for guest users. There are so many features inside the real tool which you don't think about either. <br>To access our tool you need to register and choose a plan after that you can use all features.<br><br>Thanks<br>Rezaul Islam<br>CEO & Founder @ eButify</p>
         </div>
 
         <div class="col-12 mt-4">
-            <a href="" class="btn btn-primary me-sm-3 me-1">Submit</a>
-            <button type="reset" class="btn btn-label-secondary btn-reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            <a href="{{ route('register') }}" class="btn btn-primary me-sm-3 me-1">Register Now</a>
+            <a href="{{ route('login') }}" class="btn btn-success me-sm-3 me-1">Login Now</a>
+            <button type="reset" class="btn btn-label-danger btn-reset" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
         </div>
       </div>
     </div>

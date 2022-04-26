@@ -24,7 +24,7 @@
     <div class="card mb-3">
         <div class="card-datatable table-responsive dataTables_wrapper dt-bootstrap5">
             <div class="card-header flex-column flex-md-row">
-                <h5 class="card-title mb-0">Facebook Ad Details</h5>
+                <h5 class="card-title mb-0">Ad Details For: {{ $facebook->title }}</h5>
                 <div class="dt-action-buttons text-end pt-3 pt-md-0">
                     <div class="dt-buttons"> 
                         <a href="" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="dt-button create-new btn btn-label-primary"><span><i class="fab fa-facebook-square"></i> <span class="d-none d-sm-inline-block" style="padding-left: 10px;">View Facebook Ad</span></span></a>
