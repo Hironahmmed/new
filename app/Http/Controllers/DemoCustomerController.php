@@ -14,7 +14,7 @@ class DemoCustomerController extends Controller
 {
     public function index()
     {
-        // dd('s');
+        // dd('s'); 
         $totalFacebookAd = Facebook::count() + 4000;
         $totalTiktokAd = Tiktok::count() + 3000;
         $aliexpress = Aliexpress::count() + 1500;
@@ -170,4 +170,15 @@ class DemoCustomerController extends Controller
         return view('demo_customer.shopify',compact('shopify'));
 
     }
+
+    // Favorite Facebook
+    public function fabfacebook(Request $request){
+        return view('demo_customer.fabFacebook');
+    }
+
+    // Favorite Tiktok
+    public function fabtiktok(Request $request){
+        return view('demo_customer.fabTiktok');
+    }
+
 }

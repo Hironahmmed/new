@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/libs/typeahead-js/typeahead.css" />
 @endpush
 @section('content')
-
+<div class="container-xxl news-tricker">
+    <div class="ticker-wrapper-h">
+        <div class="heading">Notice</div>
+        
+        <ul class="news-ticker-h">
+            <li>The demo user has limited access, they can't see new products.</li>
+            <li>We provide winning, untapped, and quality products daily.</li>
+            <li><a href="{{ route('register') }}">Get Access Now</a></li>
+        </ul>
+    </div>
+</div>
 <div class="container-xxl flex-grow-1 container-p-y">
 
     <div class="card mb-3">
@@ -18,7 +28,7 @@
                 <h5 class="card-title mb-0">TikTok Ad Details</h5>
                 <div class="dt-action-buttons text-end pt-3 pt-md-0">
                     <div class="dt-buttons"> 
-                        <a href="{{ $tiktok->tiktok_link }}" class="dt-button create-new btn btn-label-primary" target="blank"><span><i class="fab fa-tiktok"></i> <span class="d-none d-sm-inline-block" style="padding-left: 10px;">View TikTok Ad</span></span></a>
+                        <a href="{{ $tiktok->tiktok_link }}" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="dt-button create-new btn btn-label-primary" target="blank"><span><i class="fab fa-tiktok"></i> <span class="d-none d-sm-inline-block" style="padding-left: 10px;">View TikTok Ad</span></span></a>
                     </div>
                 </div>
             </div>
@@ -40,17 +50,17 @@
                                                     </span>
                                                 </div>
                                                 <div class="card-info">
-                                                    <p class="card-title mb-0 me-2"><a href="{{ $tiktok->ad_link }}">{{ $tiktok->page_name }}</a></p>
+                                                    <p class="card-title mb-0 me-2"><a data-bs-toggle="modal" data-bs-target="#addNewCCModal" href="{{ $tiktok->ad_link }}">{{ $tiktok->page_name }}</a></p>
                                                     <div>
                                                         <small>
-                                                            <a href="https://{{ $tiktok->shopify_website }}">{{ $tiktok->shopify_website }}</a>
+                                                            <a href="https://{{ $tiktok->shopify_website }}" data-bs-toggle="modal" data-bs-target="#addNewCCModal">{{ $tiktok->shopify_website }}</a>
                                                         </small>
                                                     </div>
                                                 </div>
                                                 </div>
                                             </div>
                                         </span>
-                                        <span><button controlsdata-play="hover" type="button" class="btn btn-icon rounded-pill btn-outline-success" data-bs-toggle="tooltip" data-bs-offset="0,8" data-bs-placement="top" data-color="black" title="Favorite Product">
+                                        <span><button controlsdata-play="hover" data-bs-toggle="modal" data-bs-target="#addNewCCModal" type="button" class="btn btn-icon rounded-pill btn-outline-success" title="Favorite Product">
                                             <i class="fas fa-heart"></i>
                                             </button></span>
                                     </div>
@@ -59,7 +69,7 @@
                                 <div class="post-media player mb-2">
                                     @if(!$tiktok->thumbnail)
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $tiktok->video }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="http://127.0.0.1:8000/download/{{ $tiktok->video }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <video oncontextmenu="return false" data-play="hover" controls="controls" preload="auto" src="{{ Storage::disk('public')->url('video/').$tiktok->video }}" type="video/mp4" class="my-video">
                                         <script>
@@ -85,7 +95,7 @@
                                                 </div>
                                             </div>
                                         </span>
-                                        <span><a href="{{ $tiktok->competitor1 }}" class="btn btn-outline-primary is-light is-rounded">{{ $tiktok->action }}</a></span>
+                                        <span><a href="{{ $tiktok->competitor1 }}" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="btn btn-outline-primary is-light is-rounded">{{ $tiktok->action }}</a></span>
                                     </div>
                                 </div>
 
@@ -201,7 +211,7 @@
                 <h5 class="card-title mb-0">Product Details</h5>
                 <div class="dt-action-buttons text-end pt-3 pt-md-0">
                     <div class="dt-buttons"> 
-                        <a href="{{ $tiktok->shopify_link }}" class="dt-button create-new btn btn-label-success" target="_blank"><span><i class="fab fa-shopify"></i> <span class="d-none d-sm-inline-block" style="padding-left: 10px;">View Product</span></span></a>
+                        <a href="{{ $tiktok->shopify_link }}" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="dt-button create-new btn btn-label-success" target="_blank"><span><i class="fab fa-shopify"></i> <span class="d-none d-sm-inline-block" style="padding-left: 10px;">View Product</span></span></a>
                     </div>
                 </div>
             </div>
@@ -277,23 +287,20 @@
                             <div class="card-body">
                                 <ul class="list-group list-group-flush list-unstyled prm-list">
                                 <li>
-                                    <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $tiktok->shopify_link }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
-                                </li>
-                                <li>
-                                    <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $tiktok->aliexpress_link }}" role="tab" target="_blank"><i class="fas fa-shopping-bag"></i> View On Aliexpress</a>
+                                    <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $tiktok->aliexpress_link }}" role="tab" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank"><i class="fas fa-shopping-bag"></i> View On Aliexpress</a>
                                 </li>
                                 
                                 <li>
-                                    <a class="list-group-item rounded my-1 btn-label-warning" href="{{ $tiktok->amazon }}" role="tab" target="_blank"><i class="fab fa-amazon"></i> View Product On Amazon</a>
+                                    <a class="list-group-item rounded my-1 btn-label-warning" href="{{ $tiktok->amazon }}" role="tab" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank"><i class="fab fa-amazon"></i> View Product On Amazon</a>
                                 </li>
                                 <li>
-                                    <a class="list-group-item rounded my-1 btn-label-secondary" href="{{ $tiktok->ebay }}" role="tab" target="_blank"><i class="fab fa-ebay"></i> View Product On eBay</a>
+                                    <a class="list-group-item rounded my-1 btn-label-secondary" href="{{ $tiktok->ebay }}" role="tab" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank"><i class="fab fa-ebay"></i> View Product On eBay</a>
                                 </li>
                                 <li>
-                                    <a class="list-group-item rounded my-1 btn-label-primary" href="{{ $tiktok->tiktok_link }}" role="tab" target="_blank"><i class="fab fa-facebook"></i> View Facebook Ads</a>
+                                    <a class="list-group-item rounded my-1 btn-label-primary" href="{{ $tiktok->tiktok_link }}" role="tab" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank"><i class="fab fa-facebook"></i> View Facebook Ads</a>
                                 </li>
                                 <li>
-                                    <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $tiktok->youtube_link }}" role="tab" target="_blank"><i class="fab fa-youtube"></i> View YouTube Review</a>
+                                    <a class="list-group-item rounded my-1 btn-label-danger" href="{{ $tiktok->youtube_link }}" role="tab" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank"><i class="fab fa-youtube"></i> View YouTube Review</a>
                                 </li>
                                 </ul>
         
@@ -307,31 +314,28 @@
                             <div class="card-body">
                                 <ul class="list-group list-group-flush list-unstyled prm-list">
                                     <li>
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $tiktok->competitor1 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="{{ $tiktok->competitor1 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
                                     </li>
                                     @if($tiktok->competitor2)
                                     <li>
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $tiktok->competitor2 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="{{ $tiktok->competitor2 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
                                     </li>
                                     @endif
                                     @if($tiktok->competitor3)
                                     <li>
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $tiktok->competitor3 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="{{ $tiktok->competitor3 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
                                     </li>
                                     @endif
                                     @if($tiktok->competitor4)
                                     <li>
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $tiktok->competitor4 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="{{ $tiktok->competitor4 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
                                     </li>
                                     @endif
                                     @if($tiktok->competitor5)
                                     <li>
-                                        <a class="list-group-item rounded my-1 btn-label-success" target="_blank" href="{{ $tiktok->competitor5 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
+                                        <a class="list-group-item rounded my-1 btn-label-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="{{ $tiktok->competitor5 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
                                     </li>
                                     @endif
-                                    <li>
-                                        <a class="list-group-item rounded my-1 btn-label-danger" target="_blank" href="{{ $tiktok->competitor1 }}" role="tab"><i class="fab fa-shopify"></i> View On Shopify Store</a>
-                                    </li>
                                 </ul>
                             </div>
                             </div>
@@ -365,19 +369,19 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="download">
-                                    <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $tiktok->gif_one }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                    <a class="list-group-item rounded my-1 btn-outline-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="http://127.0.0.1:8000/download/{{ $tiktok->gif_one }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{ Storage::disk('public')->url('gif/').$tiktok->gif_one }}" alt="First slide" />
                                 </div>
                                 <div class="carousel-item">
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="http://127.0.0.1:8000/download/{{ $tiktok->gif_two }}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-outline-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="http://127.0.0.1:8000/download/{{ $tiktok->gif_two }}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{ Storage::disk('public')->url('gif/').$tiktok->gif_two }}" alt="Second slide" />
                                 </div>
                                 <div class="carousel-item">
                                     <div class="download">
-                                        <a class="list-group-item rounded my-1 btn-outline-success" target="_blank" href="{{Storage::disk('public')->url('gif/').$tiktok->gif_three}}" role="tab"><i class="fas fa-download"></i> Download</a>
+                                        <a class="list-group-item rounded my-1 btn-outline-success" data-bs-toggle="modal" data-bs-target="#addNewCCModal" target="_blank" href="{{Storage::disk('public')->url('gif/').$tiktok->gif_three}}" role="tab"><i class="fas fa-download"></i> Download</a>
                                     </div>
                                     <img class="d-block w-100" src="{{Storage::disk('public')->url('gif/').$tiktok->gif_three}}" alt="Third slide" />
                                 </div>

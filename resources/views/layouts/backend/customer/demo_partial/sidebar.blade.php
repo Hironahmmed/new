@@ -1,7 +1,7 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
 
     <div class="app-brand demo ">
-        <a href="{{ route('democustomer.dashboard') }}" class="app-brand-link">
+        <a href="{{ route('demo.dashboard') }}" class="app-brand-link">
             <span class="app-brand-logo demo">
                 <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>icon</title>
@@ -47,7 +47,7 @@
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
         <li class="menu-item {{ Request::is('dashboard') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.dashboard') }}" class="menu-link">
+            <a href="{{ route('demo.dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Dashboards">Dashboards</div>
             </a>
@@ -56,14 +56,37 @@
         <!-- Product Research --> 
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Product Research</span></li>
         <!-- Favorite -->
+
+        <li class="menu-item {{ Request::is('demo/favorite*') ? 'active open' : ''}}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon {{ Request::is('demo/favorite*') ? 'text-success' : ''}} fab fa-gratipay"></i>
+                <div data-i18n="Saved Ads">Saved Ads</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{ Request::is('demo/favorite/facebook') ? 'active' : ''}}">
+                    <a href="{{ route('demo.favo.facebook') }}" class="menu-link">
+                        <div data-i18n="Facebook Ads">Facebook Ads</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ Request::is('demo/favorite/tiktok') ? 'active' : ''}}">
+                    <a href="{{ route('demo.favo.tiktok') }}" class="menu-link">
+                        <div data-i18n="TikTok Ads">TikTok Ads</div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+
+
         <li class="menu-item {{ Request::is('facebook*') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.facebook') }}" class="menu-link">
+            <a href="{{ route('demo.facebook') }}" class="menu-link">
                 <i class="menu-icon {{ Request::is('facebook*') ? 'text-primary' : ''}} fab fa-facebook-square"></i>
                 <div data-i18n="Facebook Ad">Facebook Ad</div>
             </a>
         </li>
         <li class="menu-item {{ Request::is('tiktok*') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.tiktok') }}" class="menu-link">
+            <a href="{{ route('demo.tiktok') }}" class="menu-link">
                 <i class="menu-icon {{ Request::is('tiktok*') ? 'text-danger' : ''}} fab fa-tiktok"></i>
                 <div data-i18n="TikTok Ad"> TikTok Ad</div>
             </a>
@@ -73,48 +96,48 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Product Explore</span></li>
 
         <li class="menu-item {{ Request::is('shopify') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.shopify') }}" class="menu-link">
+            <a href="{{ route('demo.shopify') }}" class="menu-link">
                 <i class="menu-icon {{ Request::is('shopify') ? 'text-success' : ''}} fab fa-shopify"></i>
                 <div data-i18n="Shopify Explore">Shopify Explore</div>
             </a>
         </li>
 
         <li class="menu-item {{ Request::is('aliexpress') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.aliexpress') }}" class="menu-link">
+            <a href="{{ route('demo.aliexpress') }}" class="menu-link">
                 <i class="menu-icon {{ Request::is('aliexpress') ? 'text-danger' : ''}} fas fa-shopping-bag"></i>
                 <div data-i18n="Aliexpress Explore">Aliexpress Explore</div>
             </a>
         </li>
 
         <li class="menu-item {{ Request::is('amazon') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.amazon') }}" class="menu-link">
+            <a href="{{ route('demo.amazon') }}" class="menu-link">
                 <i class="menu-icon {{ Request::is('amazon') ? 'text-warning' : ''}} fab fa-amazon"></i> 
                 <div data-i18n="Amazon Explore">Amazon Explore</div>
             </a>
         </li>
 
         <!-- Help & Support -->
-        {{-- <li class="menu-header small text-uppercase"><span class="menu-header-text">Help And Support</span></li>
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Help And Support</span></li>
         <li class="menu-item {{ Request::is('tutorial') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.tutorial') }}" class="menu-link">
+            <a href="{{ route('demo.tutorial') }}" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="menu-link">
                 <i class="menu-icon  {{ Request::is('tutorial') ? 'text-success' : ''}} fas fa-photo-video"></i>
                 <div data-i18n="Tutorials">Tutorials</div>
             </a>
         </li>
 
         <li class="menu-item {{ Request::is('contact') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.contact') }}" class="menu-link">
+            <a href="{{ route('demo.contact') }}" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="menu-link">
                 <i class="menu-icon {{ Request::is('contact') ? 'text-primary' : ''}} fas fa-headset"></i>
                 <div data-i18n="Contact Us">Contact Us</div>
             </a>
         </li>
 
         <li class="menu-item {{ Request::is('my.faq') ? 'active' : ''}}">
-            <a href="{{ route('democustomer.faq') }}" class="menu-link">
+            <a href="{{ route('demo.faq') }}" data-bs-toggle="modal" data-bs-target="#addNewCCModal" class="menu-link">
                 <i class="menu-icon {{ Request::is('faq') ? 'text-warning' : ''}} fas fa-question"></i>
                 <div data-i18n="FAQ">FAQ</div>
             </a>
-        </li> --}}
+        </li>
     </ul>
 
 </aside>

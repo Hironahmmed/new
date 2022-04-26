@@ -102,7 +102,7 @@
 
     <div class="row">
         @forelse($tiktok as $tiktok)
-        <div class="col-md-6 col-xl-4">
+        <div class="col-md-6 col-xl-4 mb-3">
             <div class="card">
                 <div class="card-body">
                     <div class="product_data_wrapper mb-2">
