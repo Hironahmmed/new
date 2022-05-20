@@ -32,7 +32,7 @@ class DashboardController extends Controller
                 $totalProduct = $totalFacebookAd + $totalTiktokAd + $aliexpress + $amazon + $shopify;
                 return view('customer.dashboard',compact('facebook','tiktok','totalView','totalFacebookAd','totalTiktokAd','aliexpress','amazon','totalProduct'));
             }
-            if(Auth::user()->subscription('main')->onGracePeriod() && !Auth::user()->subscription('main')->cancelled()){
+            if(Auth::user()->subscription('main')->onGracePeriod()){
                 $facebook = Auth::user()->view_facebooks()->count();
                 $tiktok = Auth::user()->view_tiktoks()->count();
                 $totalView = $facebook + $tiktok;
@@ -97,7 +97,7 @@ class DashboardController extends Controller
             if (Auth::user()->subscription('main')->onTrial() && !Auth::user()->subscription('main')->cancelled()) {
                 return redirect()->route('customer.dashboard');
             }
-            if(Auth::user()->subscription('main')->onGracePeriod() && !Auth::user()->subscription('main')->cancelled()){
+            if(Auth::user()->subscription('main')->onGracePeriod()){
                 return redirect()->route('customer.dashboard');
             }
 

@@ -23,7 +23,7 @@ class ProductController extends Controller
         if(!Auth::user()->stripe_id == null){
             # code...
             if (Auth::user()->subscription('main')->onTrial() && !Auth::user()->subscription('main')->cancelled()) {
-
+                
                 $collections = DB::table('facebooks')->select('collection')->distinct()->get()->pluck('collection')->sort();
                 $countrys = DB::table('facebooks')->select('country')->distinct()->get()->pluck('country')->sort();
                 $platforms = DB::table('facebooks')->select('platform')->distinct()->get()->pluck('platform')->sort();
@@ -79,7 +79,7 @@ class ProductController extends Controller
                 ]);
             }
 
-            if(Auth::user()->subscription('main')->onGracePeriod() && !Auth::user()->subscription('main')->cancelled()){
+            if(Auth::user()->subscription('main')->onGracePeriod()){
                 $collections = DB::table('facebooks')->select('collection')->distinct()->get()->pluck('collection')->sort();
                 $countrys = DB::table('facebooks')->select('country')->distinct()->get()->pluck('country')->sort();
                 $platforms = DB::table('facebooks')->select('platform')->distinct()->get()->pluck('platform')->sort();
@@ -121,6 +121,11 @@ class ProductController extends Controller
 
                 if($request->filled('media')){
                     $facebook->where('formate', $request->media);
+                }
+
+                if($request->ajax()){
+                    $view = view('customer.view.fbView',compact('facebook'))->render();
+                    return response()->json(['html'=>$view]);
                 }
 
                 return view('customer.facebook', [
@@ -209,7 +214,7 @@ class ProductController extends Controller
                     'tiktok' => $tiktok->latest()->approved()->get(),
                 ]);
             }
-        if(Auth::user()->subscription('main')->onGracePeriod() && !Auth::user()->subscription('main')->cancelled()){
+        if(Auth::user()->subscription('main')->onGracePeriod()){
             $collections = DB::table('tiktoks')->select('collection')->distinct()->get()->pluck('collection')->sort();
             $countrys = DB::table('tiktoks')->select('country')->distinct()->get()->pluck('country')->sort();
             $platforms = DB::table('tiktoks')->select('platform')->distinct()->get()->pluck('platform')->sort();
@@ -290,7 +295,7 @@ class ProductController extends Controller
                 }
                 return view('customer.aliexpress',compact('aliexpress'));
             }
-            if(Auth::user()->subscription('main')->onGracePeriod() && !Auth::user()->subscription('main')->cancelled()){
+            if(Auth::user()->subscription('main')->onGracePeriod()){
                 $aliexpress = Aliexpress::latest()->approved()->paginate(20);
                 if($request->ajax()){
                     $view = view('customer.view.aliView',compact('aliexpress'))->render();
@@ -313,7 +318,7 @@ class ProductController extends Controller
                 }
                 return view('customer.amazon',compact('amazon'));
             }
-            if(Auth::user()->subscription('main')->onGracePeriod() && !Auth::user()->subscription('main')->cancelled()){
+            if(Auth::user()->subscription('main')->onGracePeriod()){
                 $amazon = Amazon::latest()->approved()->paginate(20);
                 if($request->ajax()){
                     $view = view('customer.view.amazonView',compact('amazon'))->render();
@@ -336,7 +341,7 @@ class ProductController extends Controller
                 }
                 return view('customer.shopify',compact('shopify'));
             }
-            if(Auth::user()->subscription('main')->onGracePeriod() && !Auth::user()->subscription('main')->cancelled()){
+            if(Auth::user()->subscription('main')->onGracePeriod()){
                 $shopify = Shopify::latest()->approved()->paginate(10);
                 if($request->ajax()){
                     $view = view('customer.view.shopifyView',compact('shopify'))->render();
