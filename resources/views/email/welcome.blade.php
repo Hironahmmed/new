@@ -528,7 +528,7 @@ ul.social li{
 						<p>Hey {{ $user->name }},<br>
 
 							I’m Rezaul, the founder of eButify and I’d like to personally thank you for signing up to our service. <br>
-							To access the eButify product research tool you need to choose a plan, you will get full access to all the features for 7 days free trial for all plans. <br>
+							To access the eButify product research tool you need to choose a plan.<br>
 							Warm Regards,<br>
 							Rezaul Islam<br>
 							CEO & Founder @ eButify Inc</p>
@@ -538,83 +538,7 @@ ul.social li{
             </table>
           </td>
 	      </tr><!-- end tr -->
-	      <tr>
-		      <td class="bg_white">
-		        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-		          
-		          <tr>
-		            <td class="bg_white email-section" style="width: 100%;">
-		            	<div class="heading-section" style="text-align: center; padding: 0 30px;">
-							<h2 style="font-weight: bold;">Pick a plan that works best for you</h2>
-							<p>Stay cool, we have a 14 day money back guarantee!</p>
-		            	</div>
-		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-							<tr>
-                      <td valign="middle" width="50%" style="padding-right: 7px;">
-                      	<div class="pricing">
-                      		<h3>Monthly Plan</h3>
-                      		<h2>
-								<span><small>$</small>15.00<small>/mo</small></span>
-                      		</h2>
-							<p><a href="{{ route('customer.checkout') }}" class="btn btn-primary">Purchase</a></p>
-                      	</div>
-                      </td>
-                      <td valign="middle" width="50%" style="padding-left: 7px;">
-                      	<div class="pricing">
-                      		<h3>Yearly Plan</h3>
-                      		<h2>
-								<span><small>$</small>7.50<small>/mo</small></span>
-                      		</h2>
-							<p><a href="{{ route('customer.checkout') }}" class="btn btn-primary">Purchase</a></p>
-                      	</div>
-                      </td>
-                    </tr>
-		            	</table>
-		            </td>
-		          </tr><!-- end: tr -->
 
-				  <tr>
-					<td valign="middle" class="counter">
-					  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-						  <tr>
-							  <td valign="middle" width="33.333%" style="padding: 3em 0; background-color: #f0f8ff">
-					  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-						<tr>
-						  <td class="counter-text">
-							  <span class="num">600+</span>
-							  <span class="name">Clients</span>
-						  </td>
-						</tr>
-					  </table>
-					</td>
-					<td valign="middle" width="33.333%" style="padding: 3em 0; background-color: hsl(208, 75%, 73%);">
-					  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-						<tr>
-						  <td class="counter-text">
-							  <span class="num">15000+</span>
-							  <span class="name">Products</span>
-						  </td>
-						</tr>
-					  </table>
-					</td>
-					<td valign="middle" width="33.333%" style="padding: 3em 0; background-color: #f0f8ff;">
-					  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-						<tr>
-						  <td class="counter-text">
-							  <span class="num">4+</span>
-							  <span class="name">Tools</span>
-						  </td>
-						</tr>
-					  </table>
-					</td>
-						  </tr>
-					  </table>
-					</td>
-				</tr><!-- end tr -->
-		        </table>
-
-		      </td>
-		    </tr><!-- end:tr -->
       <!-- 1 Column Text + Button : END -->
       </table>
       <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
@@ -623,7 +547,7 @@ ul.social li{
         		<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
         			<tr>
         				<td width="100%" style="text-align: center;">
-        					<p style="font-size: 22px; margin-top: 0;">Number One Dropshipping Winning Product Research Tool</p>
+        					<p style="font-size: 22px; margin-top: 0; color:#ffffff !important;">Number One Dropshipping Winning Product Research Tool</p>
         				</td>
         			</tr>
         			<tr>

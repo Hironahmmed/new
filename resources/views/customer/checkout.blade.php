@@ -1,5 +1,5 @@
 @extends('layouts.backend.customer.app')
-@section('title','eButify Dashboard')
+@section('title','Checkout')
 @push('css')
 
 @endpush
