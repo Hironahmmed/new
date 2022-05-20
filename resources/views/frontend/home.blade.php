@@ -48,7 +48,7 @@
                 </span>
                 <span class="home_data_text">We are manually adding winning products on a daily basis. Stop wasting money on bad products. eButify is a curation of the best new products, every day. Want to be a successful store owner? Subscribe now and get access to our full winning products list with a kickass detailed analytics.</span>
                 <div class="home_btn">
-                    <a href="{{ route('register') }}" class="button">Start Free Trial</a>
+                    <a href="{{ route('demo.dashboard') }}" class="button">Try Demo</a>
                     <a href="#" class="button button_link wmBox" data-popup="{{ asset('assets/frontend/')}}/video/video.mp4"><img src="{{ asset('assets/frontend/')}}/images/Group 7.png" alt="eButify Demo Video"> Watch Demo</a>
                 </div>
                 
@@ -428,7 +428,7 @@
                         The process of deciding which products might be successful. Product research is how you validate a product idea and see if it'll be successful or not. It's a part of the product development process that helps identify customer needs and if your idea can meet market demand. The result is a better return on investment on your product.
                     </span>
 
-                    <a href="{{ route('register') }}" class="research_btn shake">Start 7 Days Free Trial</a>
+                    <a href="{{ route('demo.dashboard') }}" class="research_btn shake">View Demo App</a> 
                 </div>
             </div>
         </div>
@@ -455,7 +455,7 @@
                         Say goodbye to bad products and find the potential hot selling product and sells like hotcakes. It's something your target audience REALLY wants to buy. Don't waste your money, you can get the Facebook viral ad, Untapped product, Trending product in one place. Find winning products easily and sell them like crazy. 
                     </span>
 
-                    <a href="{{ route('register') }}" class="sell_btn shake">Start 7 Days Free Trial</a>
+                    <a href="{{ route('register') }}" class="sell_btn shake">Access Now!</a>
                 </div>
             </div>
         </div>
@@ -482,7 +482,7 @@
                         eButify provides the Facebook audience idea and the marketing plan for every product. You can see in detail just click on the view details button check them apply the strategies and Don't stop at Facebook or Google Ads. Get more traffic, more sales, and more freedom.
                     </span>
 
-                    <a href="{{ route('register') }}" class="scale_btn shake">Start 7 Days Free Trial</a>
+                    <a href="{{ route('demo.dashboard') }}" class="scale_btn shake">View Demo App</a>
                 </div>
             </div>
         </div>
@@ -499,7 +499,7 @@
             </div>
 
             <div class="try_ebutify_btn_wrapper">
-                <a href="{{ route('register') }}" class="try_ebutify_btn">Try eButify For free</a>
+                <a href="{{ route('register') }}" class="try_ebutify_btn">Try eButify</a>
                 <a href="{{ route('register') }}" class="customer_feed_btn">View Customer Feedback</a>
             </div>
 
@@ -531,7 +531,7 @@
                         Platforms and tactics may change over time. But marketing principles stay forever. We’re rolling out new masterclass content to give you both timeless strategies and the latest tactics that work today.
                     </span>
 
-                    <a href="{{ route('register') }}" class="success_btn shake">Start 7 Days Free Trial</a>
+                    <a href="{{ route('demo.dashboard') }}" class="success_btn shake">Try Demo</a>
                 </div>
             </div>
         </div>
@@ -950,7 +950,7 @@
 
                     <div class="faq_list grid">
                         <p>
-                            Yes, we currently offer a 7-day free trial plan. After that, you can a choice to renew your plan.
+                            No, we don't have any free trial, we offer a demo version for you to check out tool that who it works and how it's look like.
                         </p>
                     </div>
                 </div>
@@ -1024,7 +1024,7 @@
             <div class="journey_data grid">
                 <h1 class="featured_title">Start your journey today!</h1>
                 <span class="journey_text">Find potential hot selling product in a minute by using eButify product research tool. </span>
-                <a href="{{ route('register') }}" class="button_journey shake">Start 7 Day Free Trial</a>
+                <a href="{{ route('register') }}" class="button_journey shake">Get Full Access Now</a>
             </div>
         </div>
     </section>
