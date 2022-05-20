@@ -71,7 +71,7 @@ class Kernel extends HttpKernel
         'admin' => AdminMiddleware::class,
         'freelancer' => FreelancerMiddleware::class,
         'customer' => CustomerMiddleware::class,
-        'democustomer' => democustomer::class,
+        'demo' => democustomer::class,
         'author' => AuthorMiddleware::class,
 
     ];

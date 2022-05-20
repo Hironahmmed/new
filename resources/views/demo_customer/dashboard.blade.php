@@ -1,5 +1,5 @@
 @extends('layouts.backend.customer.demoapp')
-@section('title','Dashboard')
+@section('title','Demo Dashboard')
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/libs/apex-charts/apex-charts.css" />
 @endpush
@@ -7,7 +7,38 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <!-- Cards with few info -->
     <div class="row">
-        <div class="col-md-12 col-lg-12 mb-4 order-0">
+        <div class="col-md-6 col-lg-8 mb-4 order-0">
+            <div class="card h-100">
+                <div class="card-header">
+                <h4 class="card-title mb-0">Welcome Demo Users! 🎉</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 order-0">
+                            <div class="notice-board">
+                                <div class=" d-flex align-items-center flex-column">
+                                    <img class="img-fluid rounded" height="210" width="380" src="{{ asset('assets/backend/')}}/img/site/notice.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-8 order-0">
+                            <div class="alert alert-secondary" role="alert" style="margin-bottom: 0 !important;">
+                                <div class="fw-bold text-danger"><i class="fas fa-thin fa-bullhorn"></i> Notice Board</div>
+                                <div class="dropdown-divider"></div>
+                                <ul class="list-unstyled mb-0">
+                                    <li> - The demo user has limited access, they can't see new products.</li>
+                                    <li> - The user only can check our tool how it works and how can you use it.</li>
+                                    <li> - This section is only for a user who wants to check our tool without subscribing.</li>
+                                    <li> - To get new products on a daily basis you need to create an account on our tool and choose a plan.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4 order-0">
 
             <div class="row">
                 <div class="col-md-6 col-lg-6 mb-3 order-0">
@@ -103,7 +134,7 @@
                                     Master the ad strategy, selling direction, and hot selling products of the competitors, and quickly follow the product of ads to achieve profit growth faster. Contains the most complete competitors' products, ad materials, ad strategies, ad copy, etc.
                                 </p>
                                 
-                                <a href="" class="btn btn-primary">Go Facebook Ad</a>
+                                <a href="{{ route('demo.facebook') }}" class="btn btn-primary">Go Facebook Ad</a>
                             </div>
                             <div class="col-xl-5">
                                 <img src="https://www.pipiads.com/img/jiashao1ying.3e690a49.png">
@@ -122,7 +153,7 @@
                                     Master the ad strategy, selling direction, and hot selling products of the competitors, and quickly follow the product of ads to achieve profit growth faster. Contains the most complete competitors' products, ad materials, ad strategies, days, ad copy, etc.
                                 </p>
                                 
-                                <a href="" class="btn btn-primary">Go TikTok Ad</a>
+                                <a href="{{ route('demo.tiktok') }}" class="btn btn-primary">Go Demo TikTok Ad</a>
                             </div>
                             <div class="col-xl-4">
                                 <img src="https://www.pipiads.com/img/jiashao1ying.3e690a49.png">

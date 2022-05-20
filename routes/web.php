@@ -267,26 +267,30 @@ Route::group(['as'=>'customer.','namespace','Customer','middleware'=>['auth','cu
 | routes are loaded by the customer within a group which
 | contains the "web" customer group.
 */
-Route::group(['as'=>'democustomer.'], function(){
-    Route::get('democustomer/dashboard',[DemoCustomerController::class,'index'])->name('dashboard');
+Route::group(['as'=>'demo.'], function(){
+    Route::get('demo/dashboard',[DemoCustomerController::class,'index'])->name('dashboard');
     // Facebook
-    Route::get('democustomer/facebook',[DemoCustomerController::class,'facebookAd'])->name('facebook');
-    Route::get('democustomer/facebook/{slug}',[DemoCustomerController::class,'facebookDetails'])->name('facebook.details');
+    Route::get('demo/facebook',[DemoCustomerController::class,'facebookAd'])->name('facebook');
+    Route::get('demo/facebook/{slug}',[DemoCustomerController::class,'facebookDetails'])->name('facebook.details');
     // Tiktok
-    Route::get('democustomer/tiktok',[DemoCustomerController::class,'tiktokad'])->name('tiktok');
-    Route::get('democustomer/tiktok/{slug}',[DemoCustomerController::class,'tiktokDetails'])->name('tiktok.details');
+    Route::get('demo/tiktok',[DemoCustomerController::class,'tiktokad'])->name('tiktok');
+    Route::get('demo/tiktok/{slug}',[DemoCustomerController::class,'tiktokDetails'])->name('tiktok.details');
     // Shopify
-    Route::get('democustomer/shopify',[DemoCustomerController::class,'shopify'])->name('shopify');
+    Route::get('demo/shopify',[DemoCustomerController::class,'shopify'])->name('shopify');
     // Aliexpress
-    Route::get('democustomer/aliexpress',[DemoCustomerController::class,'aliexpress'])->name('aliexpress');
+    Route::get('demo/aliexpress',[DemoCustomerController::class,'aliexpress'])->name('aliexpress');
     // Amazon
-    Route::get('democustomer/amazon',[DemoCustomerController::class,'amazon'])->name('amazon');
+    Route::get('demo/amazon',[DemoCustomerController::class,'amazon'])->name('amazon');
     // FAQ
-    Route::get('democustomer/my.faq',[DemoCustomerController::class,'faq'])->name('faq');
+    Route::get('demomy.faq',[DemoCustomerController::class,'faq'])->name('faq');
     // Contact Us
-    Route::get('democustomer/contact',[DemoCustomerController::class,'contact'])->name('contact');
+    Route::get('demo/contact',[DemoCustomerController::class,'contact'])->name('contact');
     // Tutorials
-    Route::get('democustomer/tutorial',[DemoCustomerController::class,'tutorial'])->name('tutorial');
+    Route::get('demo/tutorial',[DemoCustomerController::class,'tutorial'])->name('tutorial');
+    // Favorite Facebook
+    Route::get('demo/favorite/facebook',[DemoCustomerController::class,'fabfacebook'])->name('favo.facebook');
+    // Favorite Tiktok
+    Route::get('demo/favorite/tiktok',[DemoCustomerController::class,'fabtiktok'])->name('favo.tiktok');
 });
 
 /*

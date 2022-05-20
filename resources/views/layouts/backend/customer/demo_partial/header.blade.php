@@ -21,7 +21,7 @@
             <!-- /Search -->
             
             <ul class="navbar-nav flex-row align-items-center ms-auto">
-{{--                 
+                
                 <!-- Notification -->
                 <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-2">
                     <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
@@ -40,7 +40,7 @@
                                 <li class="list-group-item list-group-item-action dropdown-notifications-item">
                                     <div class="d-flex">
                                     <div class="flex-grow-1">
-                                        <h6 class="mb-1">Congratulation {{ Auth::user()->name }} 🎉</h6>
+                                        <h6 class="mb-1">Congratulation User! 🎉</h6>
                                         <p class="mb-0">We glad that you are a part of eButify!</p>
                                     </div>
                                     <div class="flex-shrink-0 dropdown-notifications-actions">
@@ -58,27 +58,27 @@
                         </li>
                     </ul>
                 </li>
-                <!--/ Notification --> --}}
+                <!--/ Notification -->
 
                 <!-- User -->
-                {{-- <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
                     <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                        <img src="{{ Storage::disk('public')->url('profile/').Auth::user()->image }}" alt class="rounded-circle">
+                        <img src="{{ asset('assets/backend/')}}/img/avatars/default-user.jpg" alt class="rounded-circle">
                     </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="{{ route('customer.settings') }}">
+                        <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addNewCCModal" href="javascript:void(0);">
                         <div class="d-flex">
                             <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                                <img src="{{ Storage::disk('public')->url('profile/').Auth::user()->image }}" alt class="rounded-circle">
+                                <img src="{{ asset('assets/backend/')}}/img/avatars/default-user.jpg" alt class="rounded-circle">
                             </div>
                             </div>
                             <div class="flex-grow-1">
-                            <span class="fw-semibold d-block lh-1">{{ Auth::user()->name }}</span>
-                            <small>{{ Auth::user()->role->name }}</small>
+                            <span class="fw-semibold d-block lh-1">Demo User</span>
+                            <small>Demo</small>
                             </div>
                         </div>
                         </a>
@@ -87,27 +87,27 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{ route('customer.settings') }}">
+                        <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#addNewCCModal">
                         <i class="bx bx-cog me-2"></i>
                         <span class="align-middle">Settings</span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="{{ route('customer.profile') }}">
+                        <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#addNewCCModal">
                         <i class="fas fa-hand-holding-usd me-2"></i>
                         <span class="align-middle">Profile & Billing</span>
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="{{ route('customer.contact') }}">
+                        <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#addNewCCModal">
                         <i class="bx bx-support me-2"></i>
                         <span class="align-middle">Help</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{ route('customer.faq') }}">
+                        <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#addNewCCModal">
                         <i class="bx bx-help-circle me-2"></i>
                         <span class="align-middle">FAQ</span>
                         </a>
@@ -116,18 +116,13 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="{{ route('logout') }}" 
-                            onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit(); ">
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                            </form> 
+                        <a class="dropdown-item" href="{{ route('home') }}">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle">Log Out</span>
                         </a>
                     </li>
                     </ul>
-                </li> --}}
+                </li>
                 <!--/ User -->
                 
             </ul>
