@@ -1,5 +1,5 @@
 @extends('layouts.backend.customer.demoapp')
-@section('title','eButify Dashboard')
+@section('title','Demo Facebook Product Details')
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/libs/datatables-bs5/datatables.bootstrap5.css">
     <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/css/pages/ui-carousel.css" />

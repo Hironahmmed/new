@@ -1,6 +1,6 @@
 
 @extends('layouts.backend.customer.app')
-@section('title','Profile')
+@section('title','My Profile')
 @push('css')
 @endpush
 @section('content')

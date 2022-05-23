@@ -1,5 +1,5 @@
 @extends('layouts.backend.customer.app')
-@section('title','eButify Dashboard')
+@section('title','Contact Us')
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/css/pages/page-faq.css" />
 <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">

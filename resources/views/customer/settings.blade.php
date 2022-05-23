@@ -1,6 +1,6 @@
 
 @extends('layouts.backend.customer.app')
-@section('title','User Settings')
+@section('title','My Settings')
 @section('content')
 
 <div class="container-xxl flex-grow-1 container-p-y">

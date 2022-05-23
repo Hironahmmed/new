@@ -1,5 +1,5 @@
 @extends('layouts.backend.customer.demoapp')
-@section('title','eButify Dashboard')
+@section('title','Demo Facebook Product Research')
 @push('css')
     <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/libs/bootstrap-select/bootstrap-select.css" />
     <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/libs/flatpickr/flatpickr.css" />

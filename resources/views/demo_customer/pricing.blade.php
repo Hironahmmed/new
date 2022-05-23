@@ -1,5 +1,5 @@
 @extends('layouts.backend.customer.app')
-@section('title','eButify Dashboard')
+@section('title','Pricing')
 @push('css')
 <link rel="stylesheet" href="{{ asset('assets/backend/')}}/vendor/css/pages/page-pricing.css" />
 @endpush
