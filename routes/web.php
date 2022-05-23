@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoCustomerController;
+use App\Http\Controllers\SitemapXmlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -309,4 +310,8 @@ Route::group(['as'=>'author.','prefix'=>'author','namespace','Author','middlewar
     Route::resource('blog/post','Author\PostController');
 });
 
+
+/* Sitemap Routes */
+
+Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
 
