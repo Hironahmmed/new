@@ -9,13 +9,13 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{url()->current()}}" />
     <meta property="og:site_name" content="{{ config('app.name', 'eButify.com') }}" />
-    <meta property="og:title" content="{{ config('app.name', 'eButify.com') }} - The Best Winning Product Research Tool For Dropshipping" />
-    <meta property="og:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!" />
+    <meta property="og:title" content="{{ config('app.name', 'eButify.com') }} - eButify.com - 404 error Page Not Found!" />
+    <meta property="og:description" content="eButify.com - 404 error Page Not Found!" />
     <meta property="og:image" itemprop="image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg" />
-    <meta name="Description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">
+    <meta name="Description" content="eButify.com - 404 error Page Not Found!">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} - The Best Winning Product Research Tool For Dropshipping">
-    <meta name="twitter:description" content="eButify allows you to easily find winning products that are already proven to sell! Only a few clicks - it's time to stop guessing, start selling!">
+    <meta name="twitter:title" content="{{ config('app.name', 'eButify.com') }} - eButify.com - 404 error Page Not Found!">
+    <meta name="twitter:description" content="eButify.com - 404 error Page Not Found!">
     <meta name="twitter:image" content="{{ asset('assets/frontend/')}}/images/social-thumbnail.jpg">
     <style type="text/css">
         @import 'https://fonts.googleapis.com/css?family=Inconsolata';
