@@ -23,6 +23,15 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/')}}/css/style.css">
     <link rel="stylesheet" href="{{ asset('assets/frontend/')}}/css/media.css">
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="870bb0db-1c1d-4fcc-bda0-d87cb20d073f";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63CRTXE2T6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-63CRTXE2T6');
+    </script>
 </head>
 <body>
 
